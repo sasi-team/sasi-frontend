@@ -1,0 +1,31 @@
+
+<div class="controls-panel">
+  <div class="select-group">
+    <label for="indicator">Indicador:</label>
+    <select 
+      id="indicator"
+      [(ngModel)]="selectedIndicator" 
+      (change)="onSelectionChange()"
+      class="form-select">
+      <option value="">Selecione um indicador</option>
+      <option 
+        *ngFor="let indicator of indicators" 
+        [value]="indicator.nome_arquivo">
+        {{indicator.titulo}}
+      </option>
+    </select>
+  </div>
+
+  <div class="select-group">
+    <label for="year">Ano:</label>
+    <select 
+      id="year"
+      [(ngModel)]="selectedYear" 
+      (change)="onSelectionChange()"
+      class="form-select">
+      <option *ngFor="let year of years" [value]="year">
+        {{year}}
+      </option>
+    </select>
+  </div>
+</div>
