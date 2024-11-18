@@ -1,4 +1,12 @@
-<div id="map" class="h-96 border-2 border-gray-300 rounded-lg shadow-lg"></div>
+<app-header></app-header>
+<div class="container">
+  <app-sidebar></app-sidebar>
+  <div class="main-content">
+    <app-filter [indicadores]="indicadores" (selectedValues)="onSearch($event)"></app-filter>
+    <div id="map" style="height: 600px;"></div>
+  </div>
+</div>
 <div class="mt-4 flex justify-center">
-  <button class="bg-slate-500/50 p-2 text-white shadow-md rounded-lg ">Clique Aqui</button>
+  <button mat-raised-button color="primary" class="bg-slate-500/50 p-2 text-white shadow-md rounded-lg">Clique Aqui</button>
+  <app-controls-panel></app-controls-panel>
 </div>

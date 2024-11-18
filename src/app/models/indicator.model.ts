@@ -1,7 +1,9 @@
-// src/app/models/indicator.model.ts
 export interface Indicator {
+    id: number;
     nome_arquivo: string;
     titulo: string;
+    subtitulo: string;
+    fonte: string;
   }
   
   export interface MapFeatureProperties {
