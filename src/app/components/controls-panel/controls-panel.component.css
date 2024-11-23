@@ -1,7 +1,7 @@
-
 .controls-panel {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   /* ...existing code... */
 }
 

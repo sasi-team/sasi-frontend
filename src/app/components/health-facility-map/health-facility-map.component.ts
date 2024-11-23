@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges, OnDestroy, AfterViewInit } from '@angular/core';
 import * as L from 'leaflet';
 import 'leaflet.heat';
 import { EstabelecimentoResponse, EstabelecimentosDeSaude } from '../../models/health-facility.model';
@@ -8,7 +8,7 @@ import { EstabelecimentosSaudeService } from '../../services/health-facilities.s
   selector: 'app-health-facility-map',
   standalone: true,
   template: `
-    <div id="map" style="height: 500px;"></div>
+    <div [id]="mapId" style="height: 500px;"></div>
   `,
   styles: [`
     #map {
@@ -16,15 +16,20 @@ import { EstabelecimentosSaudeService } from '../../services/health-facilities.s
     }
   `]
 })
-export class HealthFacilityMapComponent implements OnInit, OnChanges {
+export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy, AfterViewInit {
   @Input() filters!: EstabelecimentosDeSaude;
   @Input() cityCoordinates!: { latitude: number, longitude: number };
   private map!: L.Map;
   private healthFacilitiesLayer!: L.LayerGroup;
+  mapId = 'map-' + Math.random().toString(36).substr(2, 9);
 
   constructor(private _service: EstabelecimentosSaudeService) {}
 
   ngOnInit() {
+    // Initialization logic if needed
+  }
+
+  ngAfterViewInit() {
     this.initializeMap();
   }
 
@@ -37,8 +42,21 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges {
     }
   }
 
+  ngOnDestroy() {
+    if (this.map) {
+      this.map.remove();
+    }
+  }
+
   private initializeMap() {
-    this.map = L.map('map').setView([-14.8639, -40.8243], 5);
+    if (this.map) {
+      this.map.remove();
+    }
+    const mapContainer = document.getElementById(this.mapId);
+    if (mapContainer) {
+      (mapContainer as any)._leaflet_id = null;
+    }
+    this.map = L.map(this.mapId).setView([-14.8639, -40.8243], 5);
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -81,6 +99,8 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges {
   }
 
   private updateHeatmap(estabelecimentos: any[]) {
+    if (!this.map) return;
+
     const zoomLevel = this.map.getZoom();
     const intensity = zoomLevel > 10 ? 1 : 5; // Adjust intensity based on zoom level
 

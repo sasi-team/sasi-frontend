@@ -25,8 +25,8 @@ import { map, startWith } from 'rxjs/operators';
     MatSelectModule
   ],
   template: `
-    <div class="controls" [formGroup]="filterForm">
-      <mat-form-field appearance="fill">
+    <div class="controls grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white shadow-md rounded-lg" [formGroup]="filterForm">
+      <mat-form-field appearance="fill" class="w-full">
         <mat-label>Cidade</mat-label>
         <input type="text" matInput formControlName="cidade" [matAutocomplete]="autoCidade">
         <mat-autocomplete #autoCidade="matAutocomplete" (optionSelected)="onCityChange($event.option.value)">
@@ -35,14 +35,16 @@ import { map, startWith } from 'rxjs/operators';
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-full">
         <mat-label>Tipo de Unidade</mat-label>
         <mat-select formControlName="tipoUnidade">
           <mat-option *ngFor="let tipo of tiposUnidade" [value]="tipo.codigo_tipo_unidade">{{ tipo.descricao_tipo_unidade }}</mat-option>
         </mat-select>
       </mat-form-field>
-      <button mat-raised-button color="primary" (click)="onFilter()">Buscar</button>
-      <button mat-raised-button color="warn" (click)="onClear()">Limpar</button>
+      <div class="flex justify-end space-x-4 col-span-1 md:col-span-2">
+        <button mat-raised-button color="primary" (click)="onFilter()">Buscar</button>
+        <button mat-raised-button color="warn" (click)="onClear()">Limpar</button>
+      </div>
     </div>
   `,
   styles: [`
@@ -52,10 +54,7 @@ import { map, startWith } from 'rxjs/operators';
   `]
 })
 export class HealthFacilityFilterComponent implements OnInit {
-  filterForm = new FormGroup({
-    cidade: new FormControl(),
-    tipoUnidade: new FormControl()
-  });
+  filterForm!: FormGroup;
 
   cidades: Cidade[] = [];
   filteredCidades!: Observable<Cidade[]>;
@@ -67,6 +66,11 @@ export class HealthFacilityFilterComponent implements OnInit {
   constructor(private _service: EstabelecimentosSaudeService) {}
 
   ngOnInit() {
+    this.filterForm = new FormGroup({
+      cidade: new FormControl(),
+      tipoUnidade: new FormControl()
+    });
+
     this.loadCidades();
     this.loadTiposUnidade();
 

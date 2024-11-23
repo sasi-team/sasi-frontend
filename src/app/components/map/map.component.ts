@@ -1,30 +1,36 @@
-import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, Input, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import * as L from 'leaflet';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
-import { HeaderComponent } from '../ui/header/header.component';
-import { SidebarComponent } from '../ui/sidebar/sidebar.component';
-import { FilterComponent } from '../ui/filter/filter.component';
 import { Indicator } from '../../models/indicator.model';
+import { FilterComponent } from '../ui/filter/filter.component';
 
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatButtonModule, HeaderComponent, SidebarComponent, FilterComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    MatButtonModule,
+    FilterComponent
+  ],
   templateUrl: './map.component.html',
+  styleUrls: ['./map.component.css'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class MapComponent implements OnInit {
   private map!: L.Map;
   private geojsonLayer?: L.GeoJSON;
-  indicadores: Indicator[] = [];
+  @Input() indicadores: Indicator[] = [];
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.map = L.map('map').setView([-12.9704, -38.5124], 10); 
+    this.map = L.map('map').setView([-14.8639, -40.8243], 5); 
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
