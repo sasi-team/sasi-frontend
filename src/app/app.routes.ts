@@ -28,7 +28,9 @@ export const routes: Routes = [
         loadChildren: () => import('./modules/dados-abertos-saude/dados-abertos-saude.module').then(m => m.DadosAbertosSaudeModule)
       },
       {
-        path: 'indicators', component: MapComponent
+        path: 'indicadores',
+        loadChildren: () => import('./modules/indicadores/indicadores.module')
+          .then(m => m.IndicadoresModule)
       }
     ]
   },

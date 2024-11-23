@@ -15,9 +15,6 @@ import { PublicLayoutComponent } from './layouts/public-layout/public-layout.com
 import { routes } from './app.routes';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -29,10 +26,10 @@ import { routes } from './app.routes';
     MatButtonModule,
     RouterModule.forRoot(routes),
     MainLayoutComponent,
-    PublicLayoutComponent
+    PublicLayoutComponent,
+    AppComponent
   ],
   providers: [],
-  bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

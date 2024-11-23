@@ -25,7 +25,7 @@ import { map, startWith } from 'rxjs/operators';
     MatSelectModule
   ],
   template: `
-    <div class="controls grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white shadow-md rounded-lg" [formGroup]="filterForm">
+    <div class="controls grid grid-cols-1 md:grid-cols-4 gap-4 p-4 bg-white shadow-md rounded-lg" [formGroup]="filterForm">
       <mat-form-field appearance="fill" class="w-full">
         <mat-label>Cidade</mat-label>
         <input type="text" matInput formControlName="cidade" [matAutocomplete]="autoCidade">

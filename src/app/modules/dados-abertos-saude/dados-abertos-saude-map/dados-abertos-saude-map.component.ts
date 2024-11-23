@@ -13,7 +13,7 @@ import { EstabelecimentosDeSaude } from '../../../models/health-facility.model';
     HealthFacilityMapComponent
   ],
   template: `
-    <div class="container mx-auto p-4">
+    <div class="container mx-auto p-2">
       <app-health-facility-filter (filter)="onFilter($event)" (cityChange)="onCityChange($event)"></app-health-facility-filter>
       <app-health-facility-map [filters]="filters" [cityCoordinates]="cityCoordinates"></app-health-facility-map>
     </div>

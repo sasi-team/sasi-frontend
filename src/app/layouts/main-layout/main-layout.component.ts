@@ -27,7 +27,7 @@ import { MatSidenav } from '@angular/material/sidenav';
               <span class="mat-mdc-list-item-unscoped-content mdc-list-item__primary-text text-white">Dashboard</span>
             </span>
           </a>
-          <a mat-list-item routerLink="/app/indicators" routerLinkActive="active-link" class="text-white">
+          <a mat-list-item routerLink="/app/indicadores" routerLinkActive="active-link" class="text-white">
             <span class="mdc-list-item__content">
               <span class="mat-mdc-list-item-unscoped-content mdc-list-item__primary-text text-white">Indicadores de Saúde</span>
             </span>

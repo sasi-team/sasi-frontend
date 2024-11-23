@@ -8,7 +8,7 @@ import { EstabelecimentosSaudeService } from '../../services/health-facilities.s
   selector: 'app-health-facility-map',
   standalone: true,
   template: `
-    <div [id]="mapId" style="height: 500px;"></div>
+    <div [id]="mapId" style="height: 400px;"></div>
   `,
   styles: [`
     #map {
@@ -26,7 +26,6 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
   constructor(private _service: EstabelecimentosSaudeService) {}
 
   ngOnInit() {
-    // Initialization logic if needed
   }
 
   ngAfterViewInit() {
@@ -102,14 +101,14 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
     if (!this.map) return;
 
     const zoomLevel = this.map.getZoom();
-    const intensity = zoomLevel > 10 ? 1 : 5; // Adjust intensity based on zoom level
+    const intensity = zoomLevel > 10 ? 1 : 5;
 
     const heatData = estabelecimentos
       .filter(estabelecimento => estabelecimento.latitude_estabelecimento_decimo_grau && estabelecimento.longitude_estabelecimento_decimo_grau)
       .map(estabelecimento => [
         estabelecimento.latitude_estabelecimento_decimo_grau,
         estabelecimento.longitude_estabelecimento_decimo_grau,
-        intensity // Intensidade do ponto
+        intensity
       ]);
 
     const canvas = document.createElement('canvas');
