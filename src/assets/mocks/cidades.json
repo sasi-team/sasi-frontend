@@ -1,0 +1,2923 @@
+{
+  "cidades": [
+    {
+      "codigo_ibge": "290010",
+      "nome": "Abaíra",
+      "latitude": -13.2488,
+      "longitude": -41.6619,
+      "regiao_saude__nome": "Seabra"
+    },
+    {
+      "codigo_ibge": "290020",
+      "nome": "Abaré",
+      "latitude": -8.72073,
+      "longitude": -39.1162,
+      "regiao_saude__nome": "Paulo Afonso"
+    },
+    {
+      "codigo_ibge": "290030",
+      "nome": "Acajutiba",
+      "latitude": -11.6575,
+      "longitude": -38.0197,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "290035",
+      "nome": "Adustina",
+      "latitude": -10.5437,
+      "longitude": -38.1113,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "290040",
+      "nome": "Água Fria",
+      "latitude": -11.8618,
+      "longitude": -38.7639,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "290060",
+      "nome": "Aiquara",
+      "latitude": -14.1269,
+      "longitude": -39.8937,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "290070",
+      "nome": "Alagoinhas",
+      "latitude": -12.1335,
+      "longitude": -38.4208,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "290080",
+      "nome": "Alcobaça",
+      "latitude": -17.5195,
+      "longitude": -39.2036,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "290090",
+      "nome": "Almadina",
+      "latitude": -14.7089,
+      "longitude": -39.6415,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "290100",
+      "nome": "Amargosa",
+      "latitude": -13.0215,
+      "longitude": -39.602,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "290110",
+      "nome": "Amélia Rodrigues",
+      "latitude": -12.3914,
+      "longitude": -38.7563,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "290115",
+      "nome": "América Dourada",
+      "latitude": -11.4429,
+      "longitude": -41.439,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "290120",
+      "nome": "Anagé",
+      "latitude": -14.6151,
+      "longitude": -41.1356,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "290130",
+      "nome": "Andaraí",
+      "latitude": -12.8049,
+      "longitude": -41.3297,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "290135",
+      "nome": "Andorinha",
+      "latitude": -10.3482,
+      "longitude": -39.8391,
+      "regiao_saude__nome": "Senhor do Bonfim"
+    },
+    {
+      "codigo_ibge": "290140",
+      "nome": "Angical",
+      "latitude": -12.0063,
+      "longitude": -44.7003,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "290150",
+      "nome": "Anguera",
+      "latitude": -12.1462,
+      "longitude": -39.2462,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "290160",
+      "nome": "Antas",
+      "latitude": -10.3856,
+      "longitude": -38.3401,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "290170",
+      "nome": "Antônio Cardoso",
+      "latitude": -12.4335,
+      "longitude": -39.1176,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "290180",
+      "nome": "Antônio Gonçalves",
+      "latitude": -10.5767,
+      "longitude": -40.2785,
+      "regiao_saude__nome": "Senhor do Bonfim"
+    },
+    {
+      "codigo_ibge": "290190",
+      "nome": "Aporá",
+      "latitude": -11.6577,
+      "longitude": -38.0814,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "290195",
+      "nome": "Apuarema",
+      "latitude": -13.8542,
+      "longitude": -39.7501,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "290205",
+      "nome": "Araças",
+      "latitude": -12.22,
+      "longitude": -38.2027,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "290200",
+      "nome": "Aracatu",
+      "latitude": -14.428,
+      "longitude": -41.4648,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "290210",
+      "nome": "Araci",
+      "latitude": -11.3253,
+      "longitude": -38.9584,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "290220",
+      "nome": "Aramari",
+      "latitude": -12.0884,
+      "longitude": -38.4969,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "290225",
+      "nome": "Arataca",
+      "latitude": -15.2651,
+      "longitude": -39.419,
+      "regiao_saude__nome": "Ilhéus"
+    },
+    {
+      "codigo_ibge": "290230",
+      "nome": "Aratuípe",
+      "latitude": -13.0716,
+      "longitude": -39.0038,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "290240",
+      "nome": "Aurelino Leal",
+      "latitude": -14.321,
+      "longitude": -39.329,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "290250",
+      "nome": "Baianópolis",
+      "latitude": -12.3016,
+      "longitude": -44.5388,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "290260",
+      "nome": "Baixa Grande",
+      "latitude": -11.9519,
+      "longitude": -40.169,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "290265",
+      "nome": "Banzaê",
+      "latitude": -10.5788,
+      "longitude": -38.6212,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "290270",
+      "nome": "Barra",
+      "latitude": -11.0859,
+      "longitude": -43.1459,
+      "regiao_saude__nome": "Ibotirama"
+    },
+    {
+      "codigo_ibge": "290280",
+      "nome": "Barra da Estiva",
+      "latitude": -13.6237,
+      "longitude": -41.3347,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "290290",
+      "nome": "Barra do Choça",
+      "latitude": -14.8654,
+      "longitude": -40.5791,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "290300",
+      "nome": "Barra do Mendes",
+      "latitude": -11.81,
+      "longitude": -42.059,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "290310",
+      "nome": "Barra do Rocha",
+      "latitude": -14.2,
+      "longitude": -39.5991,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "290320",
+      "nome": "Barreiras",
+      "latitude": -12.1439,
+      "longitude": -44.9968,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "290323",
+      "nome": "Barro Alto",
+      "latitude": -11.7605,
+      "longitude": -41.9054,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "290330",
+      "nome": "Barro Preto",
+      "latitude": -14.7948,
+      "longitude": -39.476,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "290327",
+      "nome": "Barrocas",
+      "latitude": -11.5272,
+      "longitude": -39.0776,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "290340",
+      "nome": "Belmonte",
+      "latitude": -15.8608,
+      "longitude": -38.8758,
+      "regiao_saude__nome": "Porto Seguro"
+    },
+    {
+      "codigo_ibge": "290350",
+      "nome": "Belo Campo",
+      "latitude": -15.0334,
+      "longitude": -41.2652,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "290360",
+      "nome": "Biritinga",
+      "latitude": -11.6072,
+      "longitude": -38.8051,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "290370",
+      "nome": "Boa Nova",
+      "latitude": -14.3598,
+      "longitude": -40.2064,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "290380",
+      "nome": "Boa Vista do Tupim",
+      "latitude": -12.6498,
+      "longitude": -40.6064,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "290390",
+      "nome": "Bom Jesus da Lapa",
+      "latitude": -13.2506,
+      "longitude": -43.4108,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "290395",
+      "nome": "Bom Jesus da Serra",
+      "latitude": -14.3663,
+      "longitude": -40.5126,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "290400",
+      "nome": "Boninal",
+      "latitude": -12.7069,
+      "longitude": -41.8286,
+      "regiao_saude__nome": "Seabra"
+    },
+    {
+      "codigo_ibge": "290405",
+      "nome": "Bonito",
+      "latitude": -11.9668,
+      "longitude": -41.2647,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "290410",
+      "nome": "Boquira",
+      "latitude": -12.8205,
+      "longitude": -42.7324,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "290420",
+      "nome": "Botuporã",
+      "latitude": -13.3772,
+      "longitude": -42.5163,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "290430",
+      "nome": "Brejões",
+      "latitude": -13.1039,
+      "longitude": -39.7988,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "290440",
+      "nome": "Brejolândia",
+      "latitude": -12.4815,
+      "longitude": -43.9679,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "290450",
+      "nome": "Brotas de Macaúbas",
+      "latitude": -11.9915,
+      "longitude": -42.6326,
+      "regiao_saude__nome": "Ibotirama"
+    },
+    {
+      "codigo_ibge": "290460",
+      "nome": "Brumado",
+      "latitude": -14.2021,
+      "longitude": -41.6696,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "290470",
+      "nome": "Buerarema",
+      "latitude": -14.9595,
+      "longitude": -39.3028,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "290475",
+      "nome": "Buritirama",
+      "latitude": -10.7171,
+      "longitude": -43.6302,
+      "regiao_saude__nome": "Ibotirama"
+    },
+    {
+      "codigo_ibge": "290480",
+      "nome": "Caatiba",
+      "latitude": -14.9699,
+      "longitude": -40.4092,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "290485",
+      "nome": "Cabaceiras do Paraguaçu",
+      "latitude": -12.5317,
+      "longitude": -39.1902,
+      "regiao_saude__nome": "Cruz das Almas"
+    },
+    {
+      "codigo_ibge": "290490",
+      "nome": "Cachoeira",
+      "latitude": -12.5994,
+      "longitude": -38.9587,
+      "regiao_saude__nome": "Cruz das Almas"
+    },
+    {
+      "codigo_ibge": "290500",
+      "nome": "Caculé",
+      "latitude": -14.5003,
+      "longitude": -42.2229,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "290510",
+      "nome": "Caém",
+      "latitude": -11.0677,
+      "longitude": -40.432,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "290515",
+      "nome": "Caetanos",
+      "latitude": -14.3347,
+      "longitude": -40.9175,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "290520",
+      "nome": "Caetité",
+      "latitude": -14.0684,
+      "longitude": -42.4861,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "290530",
+      "nome": "Cafarnaum",
+      "latitude": -11.6914,
+      "longitude": -41.4688,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "290540",
+      "nome": "Cairu",
+      "latitude": -13.4904,
+      "longitude": -39.0465,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "290550",
+      "nome": "Caldeirão Grande",
+      "latitude": -11.0208,
+      "longitude": -40.2956,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "290560",
+      "nome": "Camacan",
+      "latitude": -15.4142,
+      "longitude": -39.4919,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "290570",
+      "nome": "Camaçari",
+      "latitude": -12.6996,
+      "longitude": -38.3263,
+      "regiao_saude__nome": "Camaçari"
+    },
+    {
+      "codigo_ibge": "290580",
+      "nome": "Camamu",
+      "latitude": -13.9398,
+      "longitude": -39.1071,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "290590",
+      "nome": "Campo Alegre de Lourdes",
+      "latitude": -9.52221,
+      "longitude": -43.0126,
+      "regiao_saude__nome": "Juazeiro"
+    },
+    {
+      "codigo_ibge": "290600",
+      "nome": "Campo Formoso",
+      "latitude": -10.5105,
+      "longitude": -40.32,
+      "regiao_saude__nome": "Senhor do Bonfim"
+    },
+    {
+      "codigo_ibge": "290610",
+      "nome": "Canápolis",
+      "latitude": -13.0725,
+      "longitude": -44.201,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "290620",
+      "nome": "Canarana",
+      "latitude": -11.6858,
+      "longitude": -41.7677,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "290630",
+      "nome": "Canavieiras",
+      "latitude": -15.6722,
+      "longitude": -38.9536,
+      "regiao_saude__nome": "Ilhéus"
+    },
+    {
+      "codigo_ibge": "290640",
+      "nome": "Candeal",
+      "latitude": -11.8049,
+      "longitude": -39.1203,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "290650",
+      "nome": "Candeias",
+      "latitude": -12.6716,
+      "longitude": -38.5472,
+      "regiao_saude__nome": "Salvador"
+    },
+    {
+      "codigo_ibge": "290660",
+      "nome": "Candiba",
+      "latitude": -14.4097,
+      "longitude": -42.8667,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "290670",
+      "nome": "Cândido Sales",
+      "latitude": -15.4993,
+      "longitude": -41.2414,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "290680",
+      "nome": "Cansanção",
+      "latitude": -10.6647,
+      "longitude": -39.4944,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "290682",
+      "nome": "Canudos",
+      "latitude": -9.90014,
+      "longitude": -39.1471,
+      "regiao_saude__nome": "Juazeiro"
+    },
+    {
+      "codigo_ibge": "290685",
+      "nome": "Capela do Alto Alegre",
+      "latitude": -11.6658,
+      "longitude": -39.8349,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "290687",
+      "nome": "Capim Grosso",
+      "latitude": -11.3797,
+      "longitude": -40.0089,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "290689",
+      "nome": "Caraíbas",
+      "latitude": -14.7177,
+      "longitude": -41.2603,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "290690",
+      "nome": "Caravelas",
+      "latitude": -17.7268,
+      "longitude": -39.2597,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "290700",
+      "nome": "Cardeal da Silva",
+      "latitude": -11.9472,
+      "longitude": -37.9469,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "290710",
+      "nome": "Carinhanha",
+      "latitude": -14.2985,
+      "longitude": -43.7724,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "290720",
+      "nome": "Casa Nova",
+      "latitude": -9.16408,
+      "longitude": -40.974,
+      "regiao_saude__nome": "Juazeiro"
+    },
+    {
+      "codigo_ibge": "290730",
+      "nome": "Castro Alves",
+      "latitude": -12.7579,
+      "longitude": -39.4248,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "290740",
+      "nome": "Catolândia",
+      "latitude": -12.31,
+      "longitude": -44.8648,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "290750",
+      "nome": "Catu",
+      "latitude": -12.3513,
+      "longitude": -38.3791,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "290755",
+      "nome": "Caturama",
+      "latitude": -13.3239,
+      "longitude": -42.2904,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "290760",
+      "nome": "Central",
+      "latitude": -11.1376,
+      "longitude": -42.1116,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "290770",
+      "nome": "Chorrochó",
+      "latitude": -8.9695,
+      "longitude": -39.0979,
+      "regiao_saude__nome": "Paulo Afonso"
+    },
+    {
+      "codigo_ibge": "290780",
+      "nome": "Cícero Dantas",
+      "latitude": -10.5897,
+      "longitude": -38.3794,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "290790",
+      "nome": "Cipó",
+      "latitude": -11.1032,
+      "longitude": -38.5179,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "290800",
+      "nome": "Coaraci",
+      "latitude": -14.637,
+      "longitude": -39.5556,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "290810",
+      "nome": "Cocos",
+      "latitude": -14.1814,
+      "longitude": -44.5352,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "290820",
+      "nome": "Conceição da Feira",
+      "latitude": -12.5078,
+      "longitude": -38.9978,
+      "regiao_saude__nome": "Cruz das Almas"
+    },
+    {
+      "codigo_ibge": "290830",
+      "nome": "Conceição do Almeida",
+      "latitude": -12.7836,
+      "longitude": -39.1715,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "290840",
+      "nome": "Conceição do Coité",
+      "latitude": -11.56,
+      "longitude": -39.2808,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "290850",
+      "nome": "Conceição do Jacuípe",
+      "latitude": -12.3268,
+      "longitude": -38.7684,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "290860",
+      "nome": "Conde",
+      "latitude": -11.8179,
+      "longitude": -37.6131,
+      "regiao_saude__nome": "Camaçari"
+    },
+    {
+      "codigo_ibge": "290870",
+      "nome": "Condeúba",
+      "latitude": -14.9022,
+      "longitude": -41.9718,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "290880",
+      "nome": "Contendas do Sincorá",
+      "latitude": -13.7537,
+      "longitude": -41.048,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "290890",
+      "nome": "Coração de Maria",
+      "latitude": -12.2333,
+      "longitude": -38.7487,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "290900",
+      "nome": "Cordeiros",
+      "latitude": -15.0356,
+      "longitude": -41.9308,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "290910",
+      "nome": "Coribe",
+      "latitude": -13.8232,
+      "longitude": -44.4586,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "290920",
+      "nome": "Coronel João Sá",
+      "latitude": -10.2847,
+      "longitude": -37.9198,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "290930",
+      "nome": "Correntina",
+      "latitude": -13.3477,
+      "longitude": -44.6333,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "290940",
+      "nome": "Cotegipe",
+      "latitude": -12.0228,
+      "longitude": -44.2566,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "290950",
+      "nome": "Cravolândia",
+      "latitude": -13.3531,
+      "longitude": -39.8031,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "290960",
+      "nome": "Crisópolis",
+      "latitude": -11.5059,
+      "longitude": -38.1515,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "290970",
+      "nome": "Cristópolis",
+      "latitude": -12.2249,
+      "longitude": -44.4214,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "290980",
+      "nome": "Cruz das Almas",
+      "latitude": -12.6675,
+      "longitude": -39.1008,
+      "regiao_saude__nome": "Cruz das Almas"
+    },
+    {
+      "codigo_ibge": "290990",
+      "nome": "Curaçá",
+      "latitude": -8.98458,
+      "longitude": -39.8997,
+      "regiao_saude__nome": "Juazeiro"
+    },
+    {
+      "codigo_ibge": "291000",
+      "nome": "Dário Meira",
+      "latitude": -14.4229,
+      "longitude": -39.9031,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291005",
+      "nome": "Dias d'Ávila",
+      "latitude": -12.6187,
+      "longitude": -38.2926,
+      "regiao_saude__nome": "Camaçari"
+    },
+    {
+      "codigo_ibge": "291010",
+      "nome": "Dom Basílio",
+      "latitude": -13.7565,
+      "longitude": -41.7677,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "291020",
+      "nome": "Dom Macedo Costa",
+      "latitude": -12.9016,
+      "longitude": -39.1923,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "291030",
+      "nome": "Elísio Medrado",
+      "latitude": -12.9417,
+      "longitude": -39.5191,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "291040",
+      "nome": "Encruzilhada",
+      "latitude": -15.5302,
+      "longitude": -40.9124,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "291050",
+      "nome": "Entre Rios",
+      "latitude": -11.9392,
+      "longitude": -38.0871,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "290050",
+      "nome": "Érico Cardoso",
+      "latitude": -13.4215,
+      "longitude": -42.1352,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "291060",
+      "nome": "Esplanada",
+      "latitude": -11.7942,
+      "longitude": -37.9432,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "291070",
+      "nome": "Euclides da Cunha",
+      "latitude": -10.5078,
+      "longitude": -39.0153,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "291072",
+      "nome": "Eunápolis",
+      "latitude": -16.3715,
+      "longitude": -39.5821,
+      "regiao_saude__nome": "Porto Seguro"
+    },
+    {
+      "codigo_ibge": "291075",
+      "nome": "Fátima",
+      "latitude": -10.616,
+      "longitude": -38.2239,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "291077",
+      "nome": "Feira da Mata",
+      "latitude": -14.2044,
+      "longitude": -44.2744,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "291080",
+      "nome": "Feira de Santana",
+      "latitude": -12.2664,
+      "longitude": -38.9663,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "291085",
+      "nome": "Filadélfia",
+      "latitude": -10.7405,
+      "longitude": -40.1437,
+      "regiao_saude__nome": "Senhor do Bonfim"
+    },
+    {
+      "codigo_ibge": "291090",
+      "nome": "Firmino Alves",
+      "latitude": -14.9823,
+      "longitude": -39.9269,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "291100",
+      "nome": "Floresta Azul",
+      "latitude": -14.8629,
+      "longitude": -39.6579,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "291110",
+      "nome": "Formosa do Rio Preto",
+      "latitude": -11.0328,
+      "longitude": -45.193,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "291120",
+      "nome": "Gandu",
+      "latitude": -13.7441,
+      "longitude": -39.4747,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "291125",
+      "nome": "Gavião",
+      "latitude": -11.4688,
+      "longitude": -39.7757,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "291130",
+      "nome": "Gentio do Ouro",
+      "latitude": -11.4342,
+      "longitude": -42.5077,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "291140",
+      "nome": "Glória",
+      "latitude": -9.34382,
+      "longitude": -38.2544,
+      "regiao_saude__nome": "Paulo Afonso"
+    },
+    {
+      "codigo_ibge": "291150",
+      "nome": "Gongogi",
+      "latitude": -14.3195,
+      "longitude": -39.469,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "291160",
+      "nome": "Governador Mangabeira",
+      "latitude": -12.5994,
+      "longitude": -39.0412,
+      "regiao_saude__nome": "Cruz das Almas"
+    },
+    {
+      "codigo_ibge": "291165",
+      "nome": "Guajeru",
+      "latitude": -14.5467,
+      "longitude": -41.9381,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "291170",
+      "nome": "Guanambi",
+      "latitude": -14.2231,
+      "longitude": -42.7799,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "291180",
+      "nome": "Guaratinga",
+      "latitude": -16.5833,
+      "longitude": -39.7847,
+      "regiao_saude__nome": "Porto Seguro"
+    },
+    {
+      "codigo_ibge": "291185",
+      "nome": "Heliópolis",
+      "latitude": -10.6825,
+      "longitude": -38.2907,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "291190",
+      "nome": "Iaçu",
+      "latitude": -12.7666,
+      "longitude": -40.2056,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "291200",
+      "nome": "Ibiassucê",
+      "latitude": -14.2711,
+      "longitude": -42.257,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "291210",
+      "nome": "Ibicaraí",
+      "latitude": -14.8579,
+      "longitude": -39.5914,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "291220",
+      "nome": "Ibicoara",
+      "latitude": -13.4059,
+      "longitude": -41.284,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "291230",
+      "nome": "Ibicuí",
+      "latitude": -14.845,
+      "longitude": -39.9879,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "291240",
+      "nome": "Ibipeba",
+      "latitude": -11.6438,
+      "longitude": -42.0195,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "291250",
+      "nome": "Ibipitanga",
+      "latitude": -12.8804,
+      "longitude": -42.4856,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "291260",
+      "nome": "Ibiquera",
+      "latitude": -12.6444,
+      "longitude": -40.9338,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "291270",
+      "nome": "Ibirapitanga",
+      "latitude": -14.1649,
+      "longitude": -39.3787,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "291280",
+      "nome": "Ibirapuã",
+      "latitude": -17.6832,
+      "longitude": -40.1129,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "291290",
+      "nome": "Ibirataia",
+      "latitude": -14.0643,
+      "longitude": -39.6459,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291300",
+      "nome": "Ibitiara",
+      "latitude": -12.6502,
+      "longitude": -42.2179,
+      "regiao_saude__nome": "Seabra"
+    },
+    {
+      "codigo_ibge": "291310",
+      "nome": "Ibititá",
+      "latitude": -11.5414,
+      "longitude": -41.9748,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "291320",
+      "nome": "Ibotirama",
+      "latitude": -12.1779,
+      "longitude": -43.2167,
+      "regiao_saude__nome": "Ibotirama"
+    },
+    {
+      "codigo_ibge": "291330",
+      "nome": "Ichu",
+      "latitude": -11.7431,
+      "longitude": -39.1905,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "291340",
+      "nome": "Igaporã",
+      "latitude": -13.774,
+      "longitude": -42.7155,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "291345",
+      "nome": "Igrapiúna",
+      "latitude": -13.8295,
+      "longitude": -39.1361,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "291350",
+      "nome": "Iguaí",
+      "latitude": -14.7528,
+      "longitude": -40.0894,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "291360",
+      "nome": "Ilhéus",
+      "latitude": -14.793,
+      "longitude": -39.046,
+      "regiao_saude__nome": "Ilhéus"
+    },
+    {
+      "codigo_ibge": "291370",
+      "nome": "Inhambupe",
+      "latitude": -11.781,
+      "longitude": -38.355,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "291380",
+      "nome": "Ipecaetá",
+      "latitude": -12.3028,
+      "longitude": -39.3069,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "291390",
+      "nome": "Ipiaú",
+      "latitude": -14.1226,
+      "longitude": -39.7353,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291400",
+      "nome": "Ipirá",
+      "latitude": -12.1561,
+      "longitude": -39.7359,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "291410",
+      "nome": "Ipupiara",
+      "latitude": -11.8219,
+      "longitude": -42.6179,
+      "regiao_saude__nome": "Ibotirama"
+    },
+    {
+      "codigo_ibge": "291420",
+      "nome": "Irajuba",
+      "latitude": -13.2563,
+      "longitude": -40.0848,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291430",
+      "nome": "Iramaia",
+      "latitude": -13.2902,
+      "longitude": -40.9595,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291440",
+      "nome": "Iraquara",
+      "latitude": -12.2429,
+      "longitude": -41.6155,
+      "regiao_saude__nome": "Seabra"
+    },
+    {
+      "codigo_ibge": "291450",
+      "nome": "Irará",
+      "latitude": -12.0504,
+      "longitude": -38.7631,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "291460",
+      "nome": "Irecê",
+      "latitude": -11.3033,
+      "longitude": -41.8535,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "291465",
+      "nome": "Itabela",
+      "latitude": -16.5732,
+      "longitude": -39.5593,
+      "regiao_saude__nome": "Porto Seguro"
+    },
+    {
+      "codigo_ibge": "291470",
+      "nome": "Itaberaba",
+      "latitude": -12.5242,
+      "longitude": -40.3059,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "291480",
+      "nome": "Itabuna",
+      "latitude": -14.7876,
+      "longitude": -39.2781,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "291490",
+      "nome": "Itacaré",
+      "latitude": -14.2784,
+      "longitude": -38.9959,
+      "regiao_saude__nome": "Ilhéus"
+    },
+    {
+      "codigo_ibge": "291500",
+      "nome": "Itaeté",
+      "latitude": -12.9831,
+      "longitude": -40.9677,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "291510",
+      "nome": "Itagi",
+      "latitude": -14.1615,
+      "longitude": -40.0131,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291520",
+      "nome": "Itagibá",
+      "latitude": -14.2782,
+      "longitude": -39.8449,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291530",
+      "nome": "Itagimirim",
+      "latitude": -16.0819,
+      "longitude": -39.6133,
+      "regiao_saude__nome": "Porto Seguro"
+    },
+    {
+      "codigo_ibge": "291535",
+      "nome": "Itaguaçu da Bahia",
+      "latitude": -11.0147,
+      "longitude": -42.3997,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "291540",
+      "nome": "Itaju do Colônia",
+      "latitude": -15.1366,
+      "longitude": -39.7283,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "291550",
+      "nome": "Itajuípe",
+      "latitude": -14.6788,
+      "longitude": -39.3698,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "291560",
+      "nome": "Itamaraju",
+      "latitude": -17.0378,
+      "longitude": -39.5386,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "291570",
+      "nome": "Itamari",
+      "latitude": -13.7782,
+      "longitude": -39.683,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291580",
+      "nome": "Itambé",
+      "latitude": -15.2429,
+      "longitude": -40.63,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "291590",
+      "nome": "Itanagra",
+      "latitude": -12.2614,
+      "longitude": -38.0436,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "291600",
+      "nome": "Itanhém",
+      "latitude": -17.1642,
+      "longitude": -40.3321,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "291610",
+      "nome": "Itaparica",
+      "latitude": -12.8932,
+      "longitude": -38.68,
+      "regiao_saude__nome": "Salvador"
+    },
+    {
+      "codigo_ibge": "291620",
+      "nome": "Itapé",
+      "latitude": -14.8876,
+      "longitude": -39.4239,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "291630",
+      "nome": "Itapebi",
+      "latitude": -15.9551,
+      "longitude": -39.5329,
+      "regiao_saude__nome": "Porto Seguro"
+    },
+    {
+      "codigo_ibge": "291640",
+      "nome": "Itapetinga",
+      "latitude": -15.2475,
+      "longitude": -40.2482,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "291650",
+      "nome": "Itapicuru",
+      "latitude": -11.3088,
+      "longitude": -38.2262,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "291660",
+      "nome": "Itapitanga",
+      "latitude": -14.4139,
+      "longitude": -39.5657,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "291670",
+      "nome": "Itaquara",
+      "latitude": -13.4459,
+      "longitude": -39.9378,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291680",
+      "nome": "Itarantim",
+      "latitude": -15.6528,
+      "longitude": -40.065,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "291685",
+      "nome": "Itatim",
+      "latitude": -12.7099,
+      "longitude": -39.6952,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "291690",
+      "nome": "Itiruçu",
+      "latitude": -13.529,
+      "longitude": -40.1472,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291700",
+      "nome": "Itiúba",
+      "latitude": -10.6948,
+      "longitude": -39.8446,
+      "regiao_saude__nome": "Senhor do Bonfim"
+    },
+    {
+      "codigo_ibge": "291710",
+      "nome": "Itororó",
+      "latitude": -15.11,
+      "longitude": -40.0684,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "291720",
+      "nome": "Ituaçu",
+      "latitude": -13.8107,
+      "longitude": -41.3003,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "291730",
+      "nome": "Ituberá",
+      "latitude": -13.7249,
+      "longitude": -39.1481,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "291733",
+      "nome": "Iuiú",
+      "latitude": -14.4054,
+      "longitude": -43.5595,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "291735",
+      "nome": "Jaborandi",
+      "latitude": -13.6071,
+      "longitude": -44.4255,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "291740",
+      "nome": "Jacaraci",
+      "latitude": -14.8541,
+      "longitude": -42.4329,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "291750",
+      "nome": "Jacobina",
+      "latitude": -11.1812,
+      "longitude": -40.5117,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "291760",
+      "nome": "Jaguaquara",
+      "latitude": -13.5248,
+      "longitude": -39.964,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291770",
+      "nome": "Jaguarari",
+      "latitude": -10.2569,
+      "longitude": -40.1999,
+      "regiao_saude__nome": "Senhor do Bonfim"
+    },
+    {
+      "codigo_ibge": "291780",
+      "nome": "Jaguaripe",
+      "latitude": -13.1109,
+      "longitude": -38.8939,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "291790",
+      "nome": "Jandaíra",
+      "latitude": -11.5616,
+      "longitude": -37.7853,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "291800",
+      "nome": "Jequié",
+      "latitude": -13.8509,
+      "longitude": -40.0877,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291810",
+      "nome": "Jeremoabo",
+      "latitude": -10.0685,
+      "longitude": -38.3471,
+      "regiao_saude__nome": "Paulo Afonso"
+    },
+    {
+      "codigo_ibge": "291820",
+      "nome": "Jiquiriçá",
+      "latitude": -13.2621,
+      "longitude": -39.5737,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "291830",
+      "nome": "Jitaúna",
+      "latitude": -14.0131,
+      "longitude": -39.8969,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291835",
+      "nome": "João Dourado",
+      "latitude": -11.3486,
+      "longitude": -41.6548,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "291840",
+      "nome": "Juazeiro",
+      "latitude": -9.41622,
+      "longitude": -40.5033,
+      "regiao_saude__nome": "Juazeiro"
+    },
+    {
+      "codigo_ibge": "291845",
+      "nome": "Jucuruçu",
+      "latitude": -16.8488,
+      "longitude": -40.1641,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "291850",
+      "nome": "Jussara",
+      "latitude": -11.0431,
+      "longitude": -41.9702,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "291855",
+      "nome": "Jussari",
+      "latitude": -15.192,
+      "longitude": -39.491,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "291860",
+      "nome": "Jussiape",
+      "latitude": -13.5155,
+      "longitude": -41.5882,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "291870",
+      "nome": "Lafaiete Coutinho",
+      "latitude": -13.6541,
+      "longitude": -40.2119,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291875",
+      "nome": "Lagoa Real",
+      "latitude": -14.0334,
+      "longitude": -42.1328,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "291880",
+      "nome": "Laje",
+      "latitude": -13.1673,
+      "longitude": -39.4213,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "291890",
+      "nome": "Lajedão",
+      "latitude": -17.6056,
+      "longitude": -40.3383,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "291900",
+      "nome": "Lajedinho",
+      "latitude": -12.3529,
+      "longitude": -40.9048,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "291905",
+      "nome": "Lajedo do Tabocal",
+      "latitude": -13.4663,
+      "longitude": -40.2204,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "291910",
+      "nome": "Lamarão",
+      "latitude": -11.773,
+      "longitude": -38.887,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "291915",
+      "nome": "Lapão",
+      "latitude": -11.3851,
+      "longitude": -41.8286,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "291920",
+      "nome": "Lauro de Freitas",
+      "latitude": -12.8978,
+      "longitude": -38.321,
+      "regiao_saude__nome": "Salvador"
+    },
+    {
+      "codigo_ibge": "291930",
+      "nome": "Lençóis",
+      "latitude": -12.5616,
+      "longitude": -41.3928,
+      "regiao_saude__nome": "Seabra"
+    },
+    {
+      "codigo_ibge": "291940",
+      "nome": "Licínio de Almeida",
+      "latitude": -14.6842,
+      "longitude": -42.5095,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "291950",
+      "nome": "Livramento de Nossa Senhora",
+      "latitude": -13.6369,
+      "longitude": -41.8432,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "291955",
+      "nome": "Luís Eduardo Magalhães",
+      "latitude": -12.0956,
+      "longitude": -45.7866,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "291960",
+      "nome": "Macajuba",
+      "latitude": -12.1326,
+      "longitude": -40.3571,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "291970",
+      "nome": "Macarani",
+      "latitude": -15.5646,
+      "longitude": -40.4209,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "291980",
+      "nome": "Macaúbas",
+      "latitude": -13.0186,
+      "longitude": -42.6945,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "291990",
+      "nome": "Macururé",
+      "latitude": -9.16226,
+      "longitude": -39.0518,
+      "regiao_saude__nome": "Paulo Afonso"
+    },
+    {
+      "codigo_ibge": "291992",
+      "nome": "Madre de Deus",
+      "latitude": -12.7446,
+      "longitude": -38.6153,
+      "regiao_saude__nome": "Salvador"
+    },
+    {
+      "codigo_ibge": "291995",
+      "nome": "Maetinga",
+      "latitude": -14.6623,
+      "longitude": -41.4915,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "292000",
+      "nome": "Maiquinique",
+      "latitude": -15.624,
+      "longitude": -40.2587,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "292010",
+      "nome": "Mairi",
+      "latitude": -11.7107,
+      "longitude": -40.1437,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "292020",
+      "nome": "Malhada",
+      "latitude": -14.3371,
+      "longitude": -43.7686,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "292030",
+      "nome": "Malhada de Pedras",
+      "latitude": -14.3847,
+      "longitude": -41.8842,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "292040",
+      "nome": "Manoel Vitorino",
+      "latitude": -14.1476,
+      "longitude": -40.2399,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "292045",
+      "nome": "Mansidão",
+      "latitude": -10.7227,
+      "longitude": -44.0428,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "292050",
+      "nome": "Maracás",
+      "latitude": -13.4355,
+      "longitude": -40.4323,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "292060",
+      "nome": "Maragogipe",
+      "latitude": -12.776,
+      "longitude": -38.9175,
+      "regiao_saude__nome": "Cruz das Almas"
+    },
+    {
+      "codigo_ibge": "292070",
+      "nome": "Maraú",
+      "latitude": -14.1035,
+      "longitude": -39.0137,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "292080",
+      "nome": "Marcionílio Souza",
+      "latitude": -13.0064,
+      "longitude": -40.5295,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "292090",
+      "nome": "Mascote",
+      "latitude": -15.5542,
+      "longitude": -39.3016,
+      "regiao_saude__nome": "Ilhéus"
+    },
+    {
+      "codigo_ibge": "292100",
+      "nome": "Mata de São João",
+      "latitude": -12.5307,
+      "longitude": -38.3009,
+      "regiao_saude__nome": "Camaçari"
+    },
+    {
+      "codigo_ibge": "292105",
+      "nome": "Matina",
+      "latitude": -13.9109,
+      "longitude": -42.8439,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "292110",
+      "nome": "Medeiros Neto",
+      "latitude": -17.3707,
+      "longitude": -40.2238,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "292120",
+      "nome": "Miguel Calmon",
+      "latitude": -11.4299,
+      "longitude": -40.6031,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "292130",
+      "nome": "Milagres",
+      "latitude": -12.8646,
+      "longitude": -39.8611,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "292140",
+      "nome": "Mirangaba",
+      "latitude": -10.961,
+      "longitude": -40.574,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "292145",
+      "nome": "Mirante",
+      "latitude": -14.2385,
+      "longitude": -40.7718,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "292150",
+      "nome": "Monte Santo",
+      "latitude": -10.4374,
+      "longitude": -39.3321,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "292160",
+      "nome": "Morpará",
+      "latitude": -11.5569,
+      "longitude": -43.2766,
+      "regiao_saude__nome": "Ibotirama"
+    },
+    {
+      "codigo_ibge": "292170",
+      "nome": "Morro do Chapéu",
+      "latitude": -11.5488,
+      "longitude": -41.1565,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "292180",
+      "nome": "Mortugaba",
+      "latitude": -15.0225,
+      "longitude": -42.3727,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "292190",
+      "nome": "Mucugê",
+      "latitude": -13.0053,
+      "longitude": -41.3703,
+      "regiao_saude__nome": "Seabra"
+    },
+    {
+      "codigo_ibge": "292200",
+      "nome": "Mucuri",
+      "latitude": -18.0754,
+      "longitude": -39.5565,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "292205",
+      "nome": "Mulungu do Morro",
+      "latitude": -11.9648,
+      "longitude": -41.6374,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "292210",
+      "nome": "Mundo Novo",
+      "latitude": -11.8541,
+      "longitude": -40.4714,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "292220",
+      "nome": "Muniz Ferreira",
+      "latitude": -13.0092,
+      "longitude": -39.1092,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "292225",
+      "nome": "Muquém de São Francisco",
+      "latitude": -12.065,
+      "longitude": -43.5497,
+      "regiao_saude__nome": "Ibotirama"
+    },
+    {
+      "codigo_ibge": "292230",
+      "nome": "Muritiba",
+      "latitude": -12.6329,
+      "longitude": -38.9921,
+      "regiao_saude__nome": "Cruz das Almas"
+    },
+    {
+      "codigo_ibge": "292240",
+      "nome": "Mutuípe",
+      "latitude": -13.2284,
+      "longitude": -39.5044,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "292250",
+      "nome": "Nazaré",
+      "latitude": -13.0235,
+      "longitude": -39.0108,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "292260",
+      "nome": "Nilo Peçanha",
+      "latitude": -13.604,
+      "longitude": -39.1091,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "292265",
+      "nome": "Nordestina",
+      "latitude": -10.8192,
+      "longitude": -39.4297,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "292270",
+      "nome": "Nova Canaã",
+      "latitude": -14.7912,
+      "longitude": -40.1458,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "292273",
+      "nome": "Nova Fátima",
+      "latitude": -11.6031,
+      "longitude": -39.6302,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "292275",
+      "nome": "Nova Ibiá",
+      "latitude": -13.812,
+      "longitude": -39.6182,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "292280",
+      "nome": "Nova Itarana",
+      "latitude": -13.0241,
+      "longitude": -40.0653,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "292285",
+      "nome": "Nova Redenção",
+      "latitude": -12.815,
+      "longitude": -41.0748,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "292290",
+      "nome": "Nova Soure",
+      "latitude": -11.2329,
+      "longitude": -38.4871,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "292300",
+      "nome": "Nova Viçosa",
+      "latitude": -17.8926,
+      "longitude": -39.3743,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "292303",
+      "nome": "Novo Horizonte",
+      "latitude": -12.8083,
+      "longitude": -42.1682,
+      "regiao_saude__nome": "Seabra"
+    },
+    {
+      "codigo_ibge": "292305",
+      "nome": "Novo Triunfo",
+      "latitude": -10.3182,
+      "longitude": -38.4014,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "292310",
+      "nome": "Olindina",
+      "latitude": -11.3497,
+      "longitude": -38.3379,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "292320",
+      "nome": "Oliveira dos Brejinhos",
+      "latitude": -12.3132,
+      "longitude": -42.8969,
+      "regiao_saude__nome": "Ibotirama"
+    },
+    {
+      "codigo_ibge": "292330",
+      "nome": "Ouriçangas",
+      "latitude": -12.0175,
+      "longitude": -38.6166,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "292335",
+      "nome": "Ourolândia",
+      "latitude": -10.9578,
+      "longitude": -41.0756,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "292340",
+      "nome": "Palmas de Monte Alto",
+      "latitude": -14.2676,
+      "longitude": -43.1609,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "292350",
+      "nome": "Palmeiras",
+      "latitude": -12.5059,
+      "longitude": -41.5809,
+      "regiao_saude__nome": "Seabra"
+    },
+    {
+      "codigo_ibge": "292360",
+      "nome": "Paramirim",
+      "latitude": -13.4388,
+      "longitude": -42.2395,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "292370",
+      "nome": "Paratinga",
+      "latitude": -12.687,
+      "longitude": -43.1798,
+      "regiao_saude__nome": "Ibotirama"
+    },
+    {
+      "codigo_ibge": "292380",
+      "nome": "Paripiranga",
+      "latitude": -10.6859,
+      "longitude": -37.8626,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "292390",
+      "nome": "Pau Brasil",
+      "latitude": -15.4572,
+      "longitude": -39.6458,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "292400",
+      "nome": "Paulo Afonso",
+      "latitude": -9.3983,
+      "longitude": -38.2216,
+      "regiao_saude__nome": "Paulo Afonso"
+    },
+    {
+      "codigo_ibge": "292405",
+      "nome": "Pé de Serra",
+      "latitude": -11.8313,
+      "longitude": -39.611,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "292410",
+      "nome": "Pedrão",
+      "latitude": -12.1491,
+      "longitude": -38.6487,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "292420",
+      "nome": "Pedro Alexandre",
+      "latitude": -10.012,
+      "longitude": -37.8932,
+      "regiao_saude__nome": "Paulo Afonso"
+    },
+    {
+      "codigo_ibge": "292430",
+      "nome": "Piatã",
+      "latitude": -13.1465,
+      "longitude": -41.7702,
+      "regiao_saude__nome": "Seabra"
+    },
+    {
+      "codigo_ibge": "292440",
+      "nome": "Pilão Arcado",
+      "latitude": -10.0051,
+      "longitude": -42.4936,
+      "regiao_saude__nome": "Juazeiro"
+    },
+    {
+      "codigo_ibge": "292450",
+      "nome": "Pindaí",
+      "latitude": -14.4921,
+      "longitude": -42.686,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "292460",
+      "nome": "Pindobaçu",
+      "latitude": -10.7433,
+      "longitude": -40.3675,
+      "regiao_saude__nome": "Senhor do Bonfim"
+    },
+    {
+      "codigo_ibge": "292465",
+      "nome": "Pintadas",
+      "latitude": -11.8117,
+      "longitude": -39.9009,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "292467",
+      "nome": "Piraí do Norte",
+      "latitude": -13.759,
+      "longitude": -39.3836,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "292470",
+      "nome": "Piripá",
+      "latitude": -14.9444,
+      "longitude": -41.7168,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "292480",
+      "nome": "Piritiba",
+      "latitude": -11.73,
+      "longitude": -40.5587,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "292490",
+      "nome": "Planaltino",
+      "latitude": -13.2618,
+      "longitude": -40.3695,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "292500",
+      "nome": "Planalto",
+      "latitude": -14.6654,
+      "longitude": -40.4718,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "292510",
+      "nome": "Poções",
+      "latitude": -14.5234,
+      "longitude": -40.3634,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "292520",
+      "nome": "Pojuca",
+      "latitude": -12.4303,
+      "longitude": -38.3374,
+      "regiao_saude__nome": "Camaçari"
+    },
+    {
+      "codigo_ibge": "292525",
+      "nome": "Ponto Novo",
+      "latitude": -10.8653,
+      "longitude": -40.1311,
+      "regiao_saude__nome": "Senhor do Bonfim"
+    },
+    {
+      "codigo_ibge": "292530",
+      "nome": "Porto Seguro",
+      "latitude": -16.4435,
+      "longitude": -39.0643,
+      "regiao_saude__nome": "Porto Seguro"
+    },
+    {
+      "codigo_ibge": "292540",
+      "nome": "Potiraguá",
+      "latitude": -15.5943,
+      "longitude": -39.8638,
+      "regiao_saude__nome": "Itapetinga"
+    },
+    {
+      "codigo_ibge": "292550",
+      "nome": "Prado",
+      "latitude": -17.3364,
+      "longitude": -39.2227,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "292560",
+      "nome": "Presidente Dutra",
+      "latitude": -11.2923,
+      "longitude": -41.9843,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "292570",
+      "nome": "Presidente Jânio Quadros",
+      "latitude": -14.6885,
+      "longitude": -41.6798,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "292575",
+      "nome": "Presidente Tancredo Neves",
+      "latitude": -13.4471,
+      "longitude": -39.4203,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "292580",
+      "nome": "Queimadas",
+      "latitude": -10.9736,
+      "longitude": -39.6293,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "292590",
+      "nome": "Quijingue",
+      "latitude": -10.7505,
+      "longitude": -39.2137,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "292593",
+      "nome": "Quixabeira",
+      "latitude": -11.4031,
+      "longitude": -40.12,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "292595",
+      "nome": "Rafael Jambeiro",
+      "latitude": -12.4053,
+      "longitude": -39.5007,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "292600",
+      "nome": "Remanso",
+      "latitude": -9.61944,
+      "longitude": -42.0848,
+      "regiao_saude__nome": "Juazeiro"
+    },
+    {
+      "codigo_ibge": "292610",
+      "nome": "Retirolândia",
+      "latitude": -11.4832,
+      "longitude": -39.4234,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "292620",
+      "nome": "Riachão das Neves",
+      "latitude": -11.7508,
+      "longitude": -44.9143,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "292630",
+      "nome": "Riachão do Jacuípe",
+      "latitude": -11.8067,
+      "longitude": -39.3818,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "292640",
+      "nome": "Riacho de Santana",
+      "latitude": -13.6059,
+      "longitude": -42.9397,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "292650",
+      "nome": "Ribeira do Amparo",
+      "latitude": -11.0421,
+      "longitude": -38.4242,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "292660",
+      "nome": "Ribeira do Pombal",
+      "latitude": -10.8373,
+      "longitude": -38.5382,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "292665",
+      "nome": "Ribeirão do Largo",
+      "latitude": -15.4508,
+      "longitude": -40.7441,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "292670",
+      "nome": "Rio de Contas",
+      "latitude": -13.5852,
+      "longitude": -41.8048,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "292680",
+      "nome": "Rio do Antônio",
+      "latitude": -14.4071,
+      "longitude": -42.0721,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "292690",
+      "nome": "Rio do Pires",
+      "latitude": -13.1185,
+      "longitude": -42.2902,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "292700",
+      "nome": "Rio Real",
+      "latitude": -11.4814,
+      "longitude": -37.9332,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "292710",
+      "nome": "Rodelas",
+      "latitude": -8.85021,
+      "longitude": -38.78,
+      "regiao_saude__nome": "Paulo Afonso"
+    },
+    {
+      "codigo_ibge": "292720",
+      "nome": "Ruy Barbosa",
+      "latitude": -12.2816,
+      "longitude": -40.4931,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "292730",
+      "nome": "Salinas da Margarida",
+      "latitude": -12.873,
+      "longitude": -38.7562,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "292740",
+      "nome": "Salvador",
+      "latitude": -12.9718,
+      "longitude": -38.5011,
+      "regiao_saude__nome": "Salvador"
+    },
+    {
+      "codigo_ibge": "292750",
+      "nome": "Santa Bárbara",
+      "latitude": -11.9515,
+      "longitude": -38.9681,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "292760",
+      "nome": "Santa Brígida",
+      "latitude": -9.73227,
+      "longitude": -38.1209,
+      "regiao_saude__nome": "Paulo Afonso"
+    },
+    {
+      "codigo_ibge": "292770",
+      "nome": "Santa Cruz Cabrália",
+      "latitude": -16.2825,
+      "longitude": -39.0295,
+      "regiao_saude__nome": "Porto Seguro"
+    },
+    {
+      "codigo_ibge": "292780",
+      "nome": "Santa Cruz da Vitória",
+      "latitude": -14.964,
+      "longitude": -39.8115,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "292790",
+      "nome": "Santa Inês",
+      "latitude": -13.2793,
+      "longitude": -39.814,
+      "regiao_saude__nome": "Jequié"
+    },
+    {
+      "codigo_ibge": "292805",
+      "nome": "Santa Luzia",
+      "latitude": -15.4342,
+      "longitude": -39.3287,
+      "regiao_saude__nome": "Ilhéus"
+    },
+    {
+      "codigo_ibge": "292810",
+      "nome": "Santa Maria da Vitória",
+      "latitude": -13.3859,
+      "longitude": -44.2011,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "292840",
+      "nome": "Santa Rita de Cássia",
+      "latitude": -11.0063,
+      "longitude": -44.5255,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "292850",
+      "nome": "Santa Teresinha",
+      "latitude": -12.7697,
+      "longitude": -39.5215,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "292800",
+      "nome": "Santaluz",
+      "latitude": -11.2508,
+      "longitude": -39.375,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "292820",
+      "nome": "Santana",
+      "latitude": -12.9792,
+      "longitude": -44.0506,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "292830",
+      "nome": "Santanópolis",
+      "latitude": -12.0311,
+      "longitude": -38.8694,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "292860",
+      "nome": "Santo Amaro",
+      "latitude": -12.5472,
+      "longitude": -38.7137,
+      "regiao_saude__nome": "Salvador"
+    },
+    {
+      "codigo_ibge": "292870",
+      "nome": "Santo Antônio de Jesus",
+      "latitude": -12.9614,
+      "longitude": -39.2584,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "292880",
+      "nome": "Santo Estêvão",
+      "latitude": -12.428,
+      "longitude": -39.2505,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "292890",
+      "nome": "São Desidério",
+      "latitude": -12.3572,
+      "longitude": -44.9769,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "292895",
+      "nome": "São Domingos",
+      "latitude": -11.4649,
+      "longitude": -39.5268,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "292910",
+      "nome": "São Felipe",
+      "latitude": -12.8394,
+      "longitude": -39.0893,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "292900",
+      "nome": "São Félix",
+      "latitude": -12.6104,
+      "longitude": -38.9727,
+      "regiao_saude__nome": "Cruz das Almas"
+    },
+    {
+      "codigo_ibge": "292905",
+      "nome": "São Félix do Coribe",
+      "latitude": -13.4019,
+      "longitude": -44.1837,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "292920",
+      "nome": "São Francisco do Conde",
+      "latitude": -12.6183,
+      "longitude": -38.6786,
+      "regiao_saude__nome": "Salvador"
+    },
+    {
+      "codigo_ibge": "292925",
+      "nome": "São Gabriel",
+      "latitude": -11.2175,
+      "longitude": -41.8843,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "292930",
+      "nome": "São Gonçalo dos Campos",
+      "latitude": -12.4331,
+      "longitude": -38.9663,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "292935",
+      "nome": "São José da Vitória",
+      "latitude": -15.0787,
+      "longitude": -39.3437,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "292937",
+      "nome": "São José do Jacuípe",
+      "latitude": -11.4137,
+      "longitude": -39.8669,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "292940",
+      "nome": "São Miguel das Matas",
+      "latitude": -13.0434,
+      "longitude": -39.4578,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "292950",
+      "nome": "São Sebastião do Passé",
+      "latitude": -12.5123,
+      "longitude": -38.4905,
+      "regiao_saude__nome": "Salvador"
+    },
+    {
+      "codigo_ibge": "292960",
+      "nome": "Sapeaçu",
+      "latitude": -12.7208,
+      "longitude": -39.1824,
+      "regiao_saude__nome": "Cruz das Almas"
+    },
+    {
+      "codigo_ibge": "292970",
+      "nome": "Sátiro Dias",
+      "latitude": -11.5929,
+      "longitude": -38.5938,
+      "regiao_saude__nome": "Alagoinhas"
+    },
+    {
+      "codigo_ibge": "292975",
+      "nome": "Saubara",
+      "latitude": -12.7387,
+      "longitude": -38.7625,
+      "regiao_saude__nome": "Salvador"
+    },
+    {
+      "codigo_ibge": "292980",
+      "nome": "Saúde",
+      "latitude": -10.9428,
+      "longitude": -40.4155,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "292990",
+      "nome": "Seabra",
+      "latitude": -12.4169,
+      "longitude": -41.7722,
+      "regiao_saude__nome": "Seabra"
+    },
+    {
+      "codigo_ibge": "293000",
+      "nome": "Sebastião Laranjeiras",
+      "latitude": -14.571,
+      "longitude": -42.9434,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "293010",
+      "nome": "Senhor do Bonfim",
+      "latitude": -10.4594,
+      "longitude": -40.1865,
+      "regiao_saude__nome": "Senhor do Bonfim"
+    },
+    {
+      "codigo_ibge": "293020",
+      "nome": "Sento Sé",
+      "latitude": -9.74138,
+      "longitude": -41.8786,
+      "regiao_saude__nome": "Juazeiro"
+    },
+    {
+      "codigo_ibge": "293015",
+      "nome": "Serra do Ramalho",
+      "latitude": -13.5659,
+      "longitude": -43.5929,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "293030",
+      "nome": "Serra Dourada",
+      "latitude": -12.759,
+      "longitude": -43.9504,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "293040",
+      "nome": "Serra Preta",
+      "latitude": -12.156,
+      "longitude": -39.3305,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "293050",
+      "nome": "Serrinha",
+      "latitude": -11.6584,
+      "longitude": -39.01,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "293060",
+      "nome": "Serrolândia",
+      "latitude": -11.4085,
+      "longitude": -40.2983,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "293070",
+      "nome": "Simões Filho",
+      "latitude": -12.7866,
+      "longitude": -38.4029,
+      "regiao_saude__nome": "Camaçari"
+    },
+    {
+      "codigo_ibge": "293075",
+      "nome": "Sítio do Mato",
+      "latitude": -13.0801,
+      "longitude": -43.4689,
+      "regiao_saude__nome": "Santa Maria da Vitória"
+    },
+    {
+      "codigo_ibge": "293076",
+      "nome": "Sítio do Quinto",
+      "latitude": -10.3545,
+      "longitude": -38.2213,
+      "regiao_saude__nome": "Ribeira do Pombal"
+    },
+    {
+      "codigo_ibge": "293077",
+      "nome": "Sobradinho",
+      "latitude": -9.45024,
+      "longitude": -40.8145,
+      "regiao_saude__nome": "Juazeiro"
+    },
+    {
+      "codigo_ibge": "293080",
+      "nome": "Souto Soares",
+      "latitude": -12.088,
+      "longitude": -41.6427,
+      "regiao_saude__nome": "Seabra"
+    },
+    {
+      "codigo_ibge": "293090",
+      "nome": "Tabocas do Brejo Velho",
+      "latitude": -12.7026,
+      "longitude": -44.0075,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "293100",
+      "nome": "Tanhaçu",
+      "latitude": -14.0197,
+      "longitude": -41.2473,
+      "regiao_saude__nome": "Brumado"
+    },
+    {
+      "codigo_ibge": "293105",
+      "nome": "Tanque Novo",
+      "latitude": -13.5485,
+      "longitude": -42.4934,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "293110",
+      "nome": "Tanquinho",
+      "latitude": -11.968,
+      "longitude": -39.1033,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "293120",
+      "nome": "Taperoá",
+      "latitude": -13.5321,
+      "longitude": -39.1009,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "293130",
+      "nome": "Tapiramutá",
+      "latitude": -11.8475,
+      "longitude": -40.7927,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "293135",
+      "nome": "Teixeira de Freitas",
+      "latitude": -17.5399,
+      "longitude": -39.74,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "293140",
+      "nome": "Teodoro Sampaio",
+      "latitude": -12.295,
+      "longitude": -38.6347,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "293150",
+      "nome": "Teofilândia",
+      "latitude": -11.4827,
+      "longitude": -38.9913,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "293160",
+      "nome": "Teolândia",
+      "latitude": -13.5896,
+      "longitude": -39.484,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "293170",
+      "nome": "Terra Nova",
+      "latitude": -12.3888,
+      "longitude": -38.6238,
+      "regiao_saude__nome": "Feira de Santana"
+    },
+    {
+      "codigo_ibge": "293180",
+      "nome": "Tremedal",
+      "latitude": -14.9736,
+      "longitude": -41.4142,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "293190",
+      "nome": "Tucano",
+      "latitude": -10.9584,
+      "longitude": -38.7894,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "293200",
+      "nome": "Uauá",
+      "latitude": -9.83325,
+      "longitude": -39.4794,
+      "regiao_saude__nome": "Juazeiro"
+    },
+    {
+      "codigo_ibge": "293210",
+      "nome": "Ubaíra",
+      "latitude": -13.2714,
+      "longitude": -39.666,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "293220",
+      "nome": "Ubaitaba",
+      "latitude": -14.303,
+      "longitude": -39.3222,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "293230",
+      "nome": "Ubatã",
+      "latitude": -14.2063,
+      "longitude": -39.5207,
+      "regiao_saude__nome": "Itabuna"
+    },
+    {
+      "codigo_ibge": "293240",
+      "nome": "Uibaí",
+      "latitude": -11.3394,
+      "longitude": -42.1354,
+      "regiao_saude__nome": "Irecê"
+    },
+    {
+      "codigo_ibge": "293245",
+      "nome": "Umburanas",
+      "latitude": -10.7339,
+      "longitude": -41.3234,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "293250",
+      "nome": "Una",
+      "latitude": -15.2791,
+      "longitude": -39.0765,
+      "regiao_saude__nome": "Ilhéus"
+    },
+    {
+      "codigo_ibge": "293260",
+      "nome": "Urandi",
+      "latitude": -14.7678,
+      "longitude": -42.6498,
+      "regiao_saude__nome": "Guanambi"
+    },
+    {
+      "codigo_ibge": "293270",
+      "nome": "Uruçuca",
+      "latitude": -14.5963,
+      "longitude": -39.2851,
+      "regiao_saude__nome": "Ilhéus"
+    },
+    {
+      "codigo_ibge": "293280",
+      "nome": "Utinga",
+      "latitude": -12.0783,
+      "longitude": -41.0954,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "293290",
+      "nome": "Valença",
+      "latitude": -13.3669,
+      "longitude": -39.073,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "293300",
+      "nome": "Valente",
+      "latitude": -11.4062,
+      "longitude": -39.457,
+      "regiao_saude__nome": "Serrinha"
+    },
+    {
+      "codigo_ibge": "293305",
+      "nome": "Várzea da Roça",
+      "latitude": -11.6005,
+      "longitude": -40.1328,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "293310",
+      "nome": "Várzea do Poço",
+      "latitude": -11.5273,
+      "longitude": -40.3149,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "293315",
+      "nome": "Várzea Nova",
+      "latitude": -11.2557,
+      "longitude": -40.9432,
+      "regiao_saude__nome": "Jacobina"
+    },
+    {
+      "codigo_ibge": "293317",
+      "nome": "Varzedo",
+      "latitude": -12.9672,
+      "longitude": -39.3919,
+      "regiao_saude__nome": "Santo Antônio de Jesus"
+    },
+    {
+      "codigo_ibge": "293320",
+      "nome": "Vera Cruz",
+      "latitude": -12.9568,
+      "longitude": -38.6153,
+      "regiao_saude__nome": "Salvador"
+    },
+    {
+      "codigo_ibge": "293325",
+      "nome": "Vereda",
+      "latitude": -17.2183,
+      "longitude": -40.0974,
+      "regiao_saude__nome": "Teixeira de Freitas"
+    },
+    {
+      "codigo_ibge": "293330",
+      "nome": "Vitória da Conquista",
+      "latitude": -14.8615,
+      "longitude": -40.8442,
+      "regiao_saude__nome": "Vitória da Conquista"
+    },
+    {
+      "codigo_ibge": "293340",
+      "nome": "Wagner",
+      "latitude": -12.2819,
+      "longitude": -41.1715,
+      "regiao_saude__nome": "Itaberaba"
+    },
+    {
+      "codigo_ibge": "293345",
+      "nome": "Wanderley",
+      "latitude": -12.1144,
+      "longitude": -43.8958,
+      "regiao_saude__nome": "Barreiras"
+    },
+    {
+      "codigo_ibge": "293350",
+      "nome": "Wenceslau Guimarães",
+      "latitude": -13.6908,
+      "longitude": -39.4762,
+      "regiao_saude__nome": "Valença"
+    },
+    {
+      "codigo_ibge": "293360",
+      "nome": "Xique-Xique",
+      "latitude": -10.823,
+      "longitude": -42.7245,
+      "regiao_saude__nome": "Irecê"
+    }
+  ]
+}

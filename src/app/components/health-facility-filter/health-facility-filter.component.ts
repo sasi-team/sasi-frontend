@@ -99,7 +99,8 @@ export class HealthFacilityFilterComponent implements OnInit {
 
   loadCidades() {
     this._service.getCidades().subscribe(response => {
-      this.cidades = response.cidades.map(cidade => ({
+      console.log(response);
+      this.cidades = response.map(cidade => ({
         ...cidade,
         latitude: cidade.latitude,
         longitude: cidade.longitude
@@ -109,7 +110,7 @@ export class HealthFacilityFilterComponent implements OnInit {
 
   loadTiposUnidade() {
     this._service.getTiposUnidade().subscribe(response => {
-      this.tiposUnidade = response.tipos_unidade;
+      this.tiposUnidade = response;
     });
   }
 
