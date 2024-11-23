@@ -25,6 +25,7 @@ import { MatSidenav } from '@angular/material/sidenav';
           <a mat-list-item routerLink="/app/dashboard">Dashboard</a>
           <a mat-list-item routerLink="/app/indicators">Indicadores de Saúde</a>
           <a mat-list-item routerLink="/app/analytics">Análise de Dados</a>
+          <a mat-list-item routerLink="/app/dados-abertos-saude">Estabelecimentos de Saúde</a>
         </mat-nav-list>
       </mat-sidenav>
       <mat-sidenav-content>

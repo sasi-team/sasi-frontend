@@ -20,8 +20,12 @@ export const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('./modules/private/private.module').then(m => m.PrivateModule)
+      },
+      {
+        path: 'dados-abertos-saude',
+        loadChildren: () => import('./modules/dados-abertos-saude/dados-abertos-saude.module').then(m => m.DadosAbertosSaudeModule)
       }
     ]
   },
-  { path: '**', redirectTo: '' } 
+  { path: '**', redirectTo: '' }
 ];

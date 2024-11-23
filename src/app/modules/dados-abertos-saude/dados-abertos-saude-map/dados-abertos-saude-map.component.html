@@ -1,0 +1,20 @@
+<div class="filters">
+    <mat-form-field appearance="fill">
+      <mat-label>Região</mat-label>
+      <input matInput [(ngModel)]="filters.regiao">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Estado</mat-label>
+      <input matInput [(ngModel)]="filters.estado">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Município</mat-label>
+      <input matInput [(ngModel)]="filters.municipio">
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="onSubmit()">Buscar</button>
+  </div>
+  <div id="map" style="height: 600px;"></div>
+  <p class="text-center mt-4">Fonte: DEMAS - Departamento de Monitoramento, Avaliação e Disseminação de Informações Estratégicas em Saúde</p>
