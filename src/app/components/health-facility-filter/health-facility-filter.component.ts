@@ -6,6 +6,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { EstabelecimentosDeSaude, Cidade } from '../../models/health-facility.model';
 import { EstabelecimentosSaudeService } from '../../services/health-facilities.service';
 import { Observable } from 'rxjs';
@@ -22,12 +23,13 @@ import { map, startWith } from 'rxjs/operators';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule
   ],
   template: `
     <div class="controls grid grid-cols-1 md:grid-cols-4 gap-4 p-4 bg-white shadow-md rounded-lg" [formGroup]="filterForm">
       <mat-form-field appearance="fill" class="w-full">
-        <mat-label>Cidade</mat-label>
+        <mat-label>Cidade</mat-label> 
         <input type="text" matInput formControlName="cidade" [matAutocomplete]="autoCidade">
         <mat-autocomplete #autoCidade="matAutocomplete" (optionSelected)="onCityChange($event.option.value)">
           <mat-option *ngFor="let cidade of filteredCidades | async" [value]="cidade.codigo_ibge">
@@ -44,6 +46,9 @@ import { map, startWith } from 'rxjs/operators';
       <div class="flex justify-end space-x-4 col-span-1 md:col-span-2">
         <button mat-raised-button color="primary" (click)="onFilter()">Buscar</button>
         <button mat-raised-button color="warn" (click)="onClear()">Limpar</button>
+      </div>
+      <div *ngIf="filterForm.get('cidade')!.value && filterForm.get('tipoUnidade')!.value" class="col-span-1 md:col-span-4">
+        <mat-checkbox [(ngModel)]="showMarkers" [ngModelOptions]="{standalone: true}">Mostrar Marcadores</mat-checkbox>
       </div>
     </div>
   `,
@@ -62,6 +67,10 @@ export class HealthFacilityFilterComponent implements OnInit {
 
   @Output() filter = new EventEmitter<EstabelecimentosDeSaude>();
   @Output() cityChange = new EventEmitter<{ latitude: number, longitude: number }>();
+  @Output() toggleMarkersEvent = new EventEmitter<boolean>();
+
+  showFilters = false;
+  showMarkers = false;
 
   constructor(private _service: EstabelecimentosSaudeService) {}
 
@@ -112,6 +121,7 @@ export class HealthFacilityFilterComponent implements OnInit {
       offset: 0
     };
     this.filter.emit(filters);
+    this.toggleMarkersEvent.emit(this.showMarkers);
   }
 
   onClear() {
@@ -130,5 +140,14 @@ export class HealthFacilityFilterComponent implements OnInit {
     if (cidade) {
       this.cityChange.emit({ latitude: cidade.latitude, longitude: cidade.longitude });
     }
+  }
+
+  toggleFilters() {
+    this.showFilters = !this.showFilters;
+  }
+
+  toggleMarkers() {
+    this.showMarkers = !this.showMarkers;
+    this.toggleMarkersEvent.emit(this.showMarkers);
   }
 }

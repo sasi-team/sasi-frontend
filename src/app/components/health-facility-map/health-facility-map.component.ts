@@ -3,12 +3,18 @@ import * as L from 'leaflet';
 import 'leaflet.heat';
 import { EstabelecimentoResponse, EstabelecimentosDeSaude } from '../../models/health-facility.model';
 import { EstabelecimentosSaudeService } from '../../services/health-facilities.service';
+import { CommonModule } from '@angular/common';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-health-facility-map',
   standalone: true,
+  imports: [
+    CommonModule,
+  ],
   template: `
     <div [id]="mapId" style="height: 400px;"></div>
+    <button *ngIf="areFiltersFilled()" (click)="toggleMarkers()">Toggle Markers</button>
   `,
   styles: [`
     #map {
@@ -19,13 +25,23 @@ import { EstabelecimentosSaudeService } from '../../services/health-facilities.s
 export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy, AfterViewInit {
   @Input() filters!: EstabelecimentosDeSaude;
   @Input() cityCoordinates!: { latitude: number, longitude: number };
+  @Input() displayMarkers: boolean = false;
+  @Input() toggleMarkersEvent!: Observable<boolean>;
   private map!: L.Map;
   private healthFacilitiesLayer!: L.LayerGroup;
+  private markersLayer!: L.LayerGroup;
+  private toggleMarkersSubscription!: Subscription;
   mapId = 'map-' + Math.random().toString(36).substr(2, 9);
 
   constructor(private _service: EstabelecimentosSaudeService) {}
 
   ngOnInit() {
+    if (this.toggleMarkersEvent) {
+      this.toggleMarkersSubscription = this.toggleMarkersEvent.subscribe(showMarkers => {
+        this.displayMarkers = showMarkers;
+        this.loadHealthFacilities();
+      });
+    }
   }
 
   ngAfterViewInit() {
@@ -45,6 +61,9 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
     if (this.map) {
       this.map.remove();
     }
+    if (this.toggleMarkersSubscription) {
+      this.toggleMarkersSubscription.unsubscribe();
+    }
   }
 
   private initializeMap() {
@@ -62,6 +81,7 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
     }).addTo(this.map);
 
     this.healthFacilitiesLayer = L.layerGroup().addTo(this.map);
+    this.markersLayer = L.layerGroup().addTo(this.map);
   }
 
   private loadHealthFacilities() {
@@ -86,7 +106,11 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
     this._service.getEstabelecimentos(params).subscribe((response: EstabelecimentoResponse) => {
       const newEstabelecimentos = response.estabelecimentos;
 
-      this.updateHeatmap(newEstabelecimentos);
+      if (this.displayMarkers) {
+        this.addMarkers(newEstabelecimentos);
+      } else {
+        this.updateHeatmap(newEstabelecimentos);
+      }
 
       if (newEstabelecimentos.length === params.limit) {
         params.offset = (params.offset || 0) + params.limit;
@@ -121,6 +145,22 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
     }
   }
 
+  private addMarkers(estabelecimentos: any[]) {
+    if (!this.map) return;
+
+    if (this.markersLayer) {
+      this.markersLayer.clearLayers();
+    }
+
+    estabelecimentos.forEach(estabelecimento => {
+      if (estabelecimento.latitude_estabelecimento_decimo_grau && estabelecimento.longitude_estabelecimento_decimo_grau) {
+        const marker = L.marker([estabelecimento.latitude_estabelecimento_decimo_grau, estabelecimento.longitude_estabelecimento_decimo_grau], {
+        }).bindPopup(`<b>${estabelecimento.nome_fantasia}</b><br>${estabelecimento.endereco_estabelecimento}`);
+        this.markersLayer.addLayer(marker);
+      }
+    });
+  }
+
   private zoomToCity(coordinates: { latitude: number, longitude: number }) {
     if (this.map) {
       if (coordinates.latitude === -14.8639 && coordinates.longitude === -40.8243) {
@@ -129,5 +169,14 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
         this.map.setView([coordinates.latitude, coordinates.longitude], 12);
       }
     }
+  }
+
+  areFiltersFilled(): boolean {
+    return this.filters.codigo_tipo_unidade != null && this.filters.codigo_uf != null;
+  }
+
+  toggleMarkers() {
+    this.displayMarkers = !this.displayMarkers;
+    this.loadHealthFacilities();
   }
 }

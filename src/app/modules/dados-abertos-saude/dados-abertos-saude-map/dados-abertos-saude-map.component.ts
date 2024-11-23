@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HealthFacilityFilterComponent } from '../../../components/health-facility-filter/health-facility-filter.component';
@@ -15,7 +16,8 @@ import { EstabelecimentosDeSaude } from '../../../models/health-facility.model';
   template: `
     <div class="container mx-auto p-2">
       <app-health-facility-filter (filter)="onFilter($event)" (cityChange)="onCityChange($event)"></app-health-facility-filter>
-      <app-health-facility-map [filters]="filters" [cityCoordinates]="cityCoordinates"></app-health-facility-map>
+      <button *ngIf="areFiltersFilled()" (click)="toggleMarkers()">Toggle Markers</button>
+      <app-health-facility-map [filters]="filters" [cityCoordinates]="cityCoordinates" [displayMarkers]="displayMarkers"></app-health-facility-map>
     </div>
   `,
   styles: [`
@@ -28,6 +30,7 @@ import { EstabelecimentosDeSaude } from '../../../models/health-facility.model';
 export class DadosAbertosSaudeMapComponent {
   filters: EstabelecimentosDeSaude = {};
   cityCoordinates: { latitude: number, longitude: number } = { latitude: -14.8639, longitude: -40.8243 };
+  displayMarkers: boolean = false;
 
   onFilter(filters: EstabelecimentosDeSaude) {
     this.filters = { ...filters };
@@ -35,5 +38,13 @@ export class DadosAbertosSaudeMapComponent {
 
   onCityChange(coordinates: { latitude: number, longitude: number }) {
     this.cityCoordinates = coordinates;
+  }
+
+  areFiltersFilled(): boolean {
+    return this.filters.codigo_tipo_unidade != null && this.filters.codigo_uf != null;
+  }
+
+  toggleMarkers() {
+    this.displayMarkers = !this.displayMarkers;
   }
 }
