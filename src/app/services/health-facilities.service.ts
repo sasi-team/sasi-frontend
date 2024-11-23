@@ -1,32 +1,8 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, Observable, throwError } from "rxjs";
+import { EstabelecimentoResponse, EstabelecimentosDeSaude } from "../models/health-facility.model";
 
-export interface HealthFacilityParams {
-  codigo_tipo_unidade?: number;
-  codigo_uf?: number;
-  codigo_municipio?: number;
-  status?: 0 | 1;
-  estabelecimento_possui_centro_cirurgico?: 0 | 1;
-  estabelecimento_possui_centro_obstetrico?: 0 | 1;
-  limit?: number;
-  offset?: number;
-}
-
-export interface HealthFacility {
-  codigo_cnes: number;
-  nome_fantasia: string;
-  endereco_estabelecimento: string;
-  numero_estabelecimento: string;
-  bairro_estabelecimento: string;
-  latitude_estabelecimento_decimo_grau: number;
-  longitude_estabelecimento_decimo_grau: number;
-  [key: string]: any;
-}
-
-interface HealthFacilityResponse {
-  estabelecimentos: HealthFacility[];
-}
 
 @Injectable({
   providedIn: 'root'
@@ -36,8 +12,8 @@ export class EstabelecimentosSaudeService {
 
   constructor(private http: HttpClient) {}
 
-  getEstabelecimentos(params: HealthFacilityParams = {}): Observable<HealthFacilityResponse> {
-    const defaultParams: HealthFacilityParams = {
+  getEstabelecimentos(params: EstabelecimentosDeSaude = {}): Observable<EstabelecimentoResponse> {
+    const defaultParams: EstabelecimentosDeSaude = {
       limit: 1000,
       offset: 0
     };
@@ -53,7 +29,7 @@ export class EstabelecimentosSaudeService {
       fromObject: queryParams as { [key: string]: string | number }
     });
 
-    return this.http.get<HealthFacilityResponse>(this.baseUrl, { params: httpParams })
+    return this.http.get<EstabelecimentoResponse>(this.baseUrl, { params: httpParams })
       .pipe(
         catchError(error => {
           console.error('Error fetching health facilities:', error);
@@ -63,11 +39,11 @@ export class EstabelecimentosSaudeService {
   }
 
   getPaginatedHealthFacilities(
-    params: HealthFacilityParams = {}, 
+    params: EstabelecimentosDeSaude = {}, 
     pageSize: number = 100
-  ): Observable<HealthFacility[]> {
-    return new Observable<HealthFacility[]>(observer => {
-      const allFacilities: HealthFacility[] = [];
+  ): Observable<EstabelecimentosDeSaude[]> {
+    return new Observable<EstabelecimentosDeSaude[]>(observer => {
+      const allFacilities: EstabelecimentosDeSaude[] = [];
       let currentOffset = 0;
 
       const fetchPage = () => {
