@@ -18,8 +18,9 @@ import { EstabelecimentosSaudeService } from '../../services/health-facilities.s
 })
 export class HealthFacilityMapComponent implements OnInit, OnChanges {
   @Input() filters!: EstabelecimentosDeSaude;
+  @Input() cityCoordinates!: { latitude: number, longitude: number };
   private map!: L.Map;
-  private healthFacilitiesLayer?: L.LayerGroup;
+  private healthFacilitiesLayer!: L.LayerGroup;
 
   constructor(private _service: EstabelecimentosSaudeService) {}
 
@@ -31,6 +32,9 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges {
     if (changes['filters'] && changes['filters'].currentValue) {
       this.loadHealthFacilities();
     }
+    if (changes['cityCoordinates'] && changes['cityCoordinates'].currentValue) {
+      this.zoomToCity(changes['cityCoordinates'].currentValue);
+    }
   }
 
   private initializeMap() {
@@ -39,6 +43,8 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
+
+    this.healthFacilitiesLayer = L.layerGroup().addTo(this.map);
   }
 
   private loadHealthFacilities() {
@@ -52,9 +58,7 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges {
       Object.entries(params).filter(([_, v]) => v != null && v !== '')
     );
 
-    if (!this.healthFacilitiesLayer) {
-      this.healthFacilitiesLayer = L.layerGroup().addTo(this.map);
-    } else {
+    if (this.healthFacilitiesLayer) {
       this.healthFacilitiesLayer.clearLayers();
     }
 
@@ -71,28 +75,40 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges {
         params.offset = (params.offset || 0) + params.limit;
         this.fetchAndPlotHealthFacilities(params);
       } else {
-        console.log('All estabelecimentos loaded');
+        console.log('All establishments loaded');
       }
     });
   }
 
   private updateHeatmap(estabelecimentos: any[]) {
-    if (!this.healthFacilitiesLayer) {
-      this.healthFacilitiesLayer = L.layerGroup().addTo(this.map);
-    }
+    const zoomLevel = this.map.getZoom();
+    const intensity = zoomLevel > 10 ? 1 : 5; // Adjust intensity based on zoom level
 
     const heatData = estabelecimentos
       .filter(estabelecimento => estabelecimento.latitude_estabelecimento_decimo_grau && estabelecimento.longitude_estabelecimento_decimo_grau)
       .map(estabelecimento => [
         estabelecimento.latitude_estabelecimento_decimo_grau,
         estabelecimento.longitude_estabelecimento_decimo_grau,
-        2 // Intensidade do ponto
+        intensity // Intensidade do ponto
       ]);
 
-    const heat = (L as any).heatLayer(heatData, { radius: 25 }).addTo(this.map);
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d', { willReadFrequently: true });
+
+    const heat = (L as any).heatLayer(heatData, { radius: 25, context }).addTo(this.map);
 
     if (this.healthFacilitiesLayer) {
       this.healthFacilitiesLayer.addLayer(heat);
+    }
+  }
+
+  private zoomToCity(coordinates: { latitude: number, longitude: number }) {
+    if (this.map) {
+      if (coordinates.latitude === -14.8639 && coordinates.longitude === -40.8243) {
+        this.map.setView([coordinates.latitude, coordinates.longitude], 5);
+      } else {
+        this.map.setView([coordinates.latitude, coordinates.longitude], 12);
+      }
     }
   }
 }

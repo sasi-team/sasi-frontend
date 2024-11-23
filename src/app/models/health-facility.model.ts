@@ -1,4 +1,3 @@
-
 export interface EstabelecimentosDeSaude {
   codigo_tipo_unidade?: number;
   codigo_uf?: number;
@@ -12,4 +11,11 @@ export interface EstabelecimentosDeSaude {
 
 export interface EstabelecimentoResponse {
   estabelecimentos: any[];
+}
+
+export interface Cidade {
+  codigo_ibge: string;
+  nome: string;
+  latitude: number;
+  longitude: number;
 }

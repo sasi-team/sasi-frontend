@@ -1,14 +1,14 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, Observable, throwError } from "rxjs";
-import { EstabelecimentoResponse, EstabelecimentosDeSaude } from "../models/health-facility.model";
+import { Cidade, EstabelecimentoResponse, EstabelecimentosDeSaude } from "../models/health-facility.model";
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class EstabelecimentosSaudeService {
-  private baseUrl = 'http://localhost:8000/api/estabelecimentos/';
+  private baseUrl = 'http://localhost:8000/api';
 
   constructor(private http: HttpClient) {}
 
@@ -29,7 +29,7 @@ export class EstabelecimentosSaudeService {
       fromObject: queryParams as { [key: string]: string | number }
     });
 
-    return this.http.get<EstabelecimentoResponse>(this.baseUrl, { params: httpParams })
+    return this.http.get<EstabelecimentoResponse>(`${this.baseUrl}/estabelecimentos/`, { params: httpParams })
       .pipe(
         catchError(error => {
           console.error('Error fetching health facilities:', error);
@@ -69,5 +69,13 @@ export class EstabelecimentosSaudeService {
 
       fetchPage();
     });
+  }
+
+  getCidades(): Observable<{ cidades: Cidade[] }> {
+    return this.http.get<{ cidades: Cidade[] }>(`${this.baseUrl}/cidades/`);
+  }
+
+  getTiposUnidade(): Observable<{ tipos_unidade: { codigo_tipo_unidade: number, descricao_tipo_unidade: string }[] }> {
+    return this.http.get<{ tipos_unidade: { codigo_tipo_unidade: number, descricao_tipo_unidade: string }[] }>(`${this.baseUrl}/tipos_unidade/`);
   }
 }

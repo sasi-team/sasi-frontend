@@ -13,8 +13,8 @@ import { EstabelecimentosDeSaude } from '../../../models/health-facility.model';
     HealthFacilityMapComponent
   ],
   template: `
-    <app-health-facility-filter (filter)="onFilter($event)"></app-health-facility-filter>
-    <app-health-facility-map [filters]="filters"></app-health-facility-map>
+    <app-health-facility-filter (filter)="onFilter($event)" (cityChange)="onCityChange($event)"></app-health-facility-filter>
+    <app-health-facility-map [filters]="filters" [cityCoordinates]="cityCoordinates"></app-health-facility-map>
   `,
   styles: [`
     :host {
@@ -25,8 +25,13 @@ import { EstabelecimentosDeSaude } from '../../../models/health-facility.model';
 })
 export class DadosAbertosSaudeMapComponent {
   filters: EstabelecimentosDeSaude = {};
+  cityCoordinates: { latitude: number, longitude: number } = { latitude: -14.8639, longitude: -40.8243 };
 
   onFilter(filters: EstabelecimentosDeSaude) {
     this.filters = { ...filters };
+  }
+
+  onCityChange(coordinates: { latitude: number, longitude: number }) {
+    this.cityCoordinates = coordinates;
   }
 }
