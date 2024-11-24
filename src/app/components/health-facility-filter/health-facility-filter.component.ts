@@ -99,7 +99,6 @@ export class HealthFacilityFilterComponent implements OnInit {
 
   loadCidades() {
     this._service.getCidades().subscribe(response => {
-      console.log(response);
       this.cidades = response.map(cidade => ({
         ...cidade,
         latitude: cidade.latitude,
