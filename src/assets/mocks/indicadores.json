@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "nome_arquivo": "indicador_3",
+    "titulo": "Indicador 3. Proporção de óbitos com causa definida, segundo local de residência. Bahia, 2010-2020*",
+    "subtitulo": "Meta Estadual: 90%",
+    "fonte": "Fonte: SIM, DIVEP/SUVISA/SESAB, 2021."
+  },
+  {
+    "id": 2,
+    "nome_arquivo": "indicador_4",
+    "titulo": " Indicador 4.  Proporção de vacinas selecionadas do Calendário Básico de Vacinação para criança menores de dois anos de idade - Pentavalente 3ª dose, Pneumocócica 10-valente 2ª dose, Poliomielite 3ª dose e Tríplice viral 1ª dose - com cobertura vacinal preconizada. Bahia - 2016 a 2020*",
+    "subtitulo": "Meta Estadual: 75% correspondendo a cobertura  ≥ 95% para, no mínimo, três dos quatro imunobilógicos selecionados.",
+    "fonte": "nan"
+  },
+  {
+    "id": 3,
+    "nome_arquivo": "indicador_5",
+    "titulo": "Indicador 05. Proporção de casos de doenças de notificação compulsória imediata (DNCI) encerrados em até 60 dias após notificação*. ",
+    "subtitulo": "Meta Estadual: 75%",
+    "fonte": "Fonte: SINAN, DIVEP/SUVISA/SESAB, 2021."
+  },
+  {
+    "id": 4,
+    "nome_arquivo": "indicador_6",
+    "titulo": "Indicador 06. Proporção de Cura de casos novos de hanseníase diagnosticados nos anos das coortes - Município de Residência.  Bahia  ",
+    "subtitulo": "Meta Estadual: ≥ 88%",
+    "fonte": "Fonte: SINAN, DIVEP/SUVISA/SESAB, 2021."
+  },
+  {
+    "id": 5,
+    "nome_arquivo": "indicador_8",
+    "titulo": "Indicador 8. Nº de Casos novos de sífilis congênita em menores de um ano, segundo local de residência, Bahia. \nPeríodo: 2010 - 2020*",
+    "subtitulo": "Meta Estadual: Reduzir em 20% ",
+    "fonte": "Fonte: SINAN, DIVEP/SUVISA/SESAB, 2021."
+  },
+  {
+    "id": 6,
+    "nome_arquivo": "indicador_9",
+    "titulo": "Indicador 9. Casos novos de aids em menores de 5 anos, segundo local de residência. Bahia.\nPeríodo: 2010 - 2020*",
+    "subtitulo": "Meta Estadual: Reduzir em 20%",
+    "fonte": "Fonte: SINAN, DIVEP/SUVISA/SESAB, 2021."
+  },
+  {
+    "id": 7,
+    "nome_arquivo": "indicador_10",
+    "titulo": "Indicador 10.  Proporção de análises realizadas em amostras de água para consumo humano quanto aos parâmetros coliformes totais, cloro residual livre e turbidez, segundo local de residência. Estado da Bahia, 2019.",
+    "subtitulo": "Meta Estadual: 100% amostragem e Proposto Escalonamento",
+    "fonte": "Fonte:SESAB/SUVISA/DIVISA - SISAGUA"
+  },
+  {
+    "id": 8,
+    "nome_arquivo": "indicador_11",
+    "titulo": "Indicador 11. Razão de Exames Citopatólogicos do colo do útero em mulheres de 25 a 64 anos, segundo local de residência. Bahia, 2010 - 2019*",
+    "subtitulo": "Proposto Escalonamento",
+    "fonte": "Fonte: Sesab/Suvisa/Divep/COASS-SIASUS"
+  },
+  {
+    "id": 9,
+    "nome_arquivo": "indicador_12",
+    "titulo": "Indicador 12. Exames mamográficos de rastreamento, realizados em mulheres de 50 a 69 anos (nº e razão), segundo local de residência. Estado da Bahia, 2010 - 2019*",
+    "subtitulo": "Proposto Escalonamento",
+    "fonte": "Fonte: Sesab/Suvisa/Divep/COASS- SIASUS"
+  },
+  {
+    "id": 10,
+    "nome_arquivo": "indicador_13",
+    "titulo": "Indicador 13.   Proporção de parto normal no SUS e na saúde suplementar, segundo local de residência. \nEstado da Bahia, 2010-2019*",
+    "subtitulo": "Meta Estadual: 60% e Proposto Escalonamento",
+    "fonte": "Fonte: Sesab/Suvisa/Divep/COASS-Sinasc"
+  },
+  {
+    "id": 11,
+    "nome_arquivo": "indicador_14",
+    "titulo": "Indicador 14. Proporção de gravidez na adolescência (10 a 19 anos), segundo local de residência. Estado da Bahia, 2010-2019*",
+    "subtitulo": "Meta Estadual: 16,5% e Proposto Escalonamento",
+    "fonte": "Fonte: Sesab/Suvisa/DIVEP/COASS- Sinasc"
+  },
+  {
+    "id": 12,
+    "nome_arquivo": "indicador_15",
+    "titulo": "Indicador 15. Óbitos (Número e Taxa) infantil por 1.000 nascidos vivos, segundo local de residência. Estado da Bahia, 2010 - 2019*",
+    "subtitulo": "Meta Estadual: 15,1%",
+    "fonte": "Fonte: Sesab/Suvisa/Divep/COASS-SIM e Sinasc"
+  },
+  {
+    "id": 13,
+    "nome_arquivo": "indicador_16",
+    "titulo": "Indicador 16. Óbito Materno (Número e Razão), segundo local de residência. Estado da Bahia, 2010-2020*",
+    "subtitulo": "Meta Estadual: 100 para o ano de 2021 e Proposto Escalonamento",
+    "fonte": "Fonte: Sesab/Suvisa/Divep/COASS-IBGE, SIM e Sinasc"
+  },
+  {
+    "id": 14,
+    "nome_arquivo": "indicador_18",
+    "titulo": " Indicador 18. Cobertura de acompanhamento das condicionalidades de Saúde do Programa Bolsa Família (PBF) - Série histórica percentual de cobertura com base nas famílias totalmente acompanhadas, Bahia - 1ª e 2ª vigências de 2015 a 2020",
+    "subtitulo": "Meta Estadual: 82,38% e Proposto Escalonamento",
+    "fonte": "Fonte: MS/SAS/DAB - Coordenação-Geral de Alimentação e Nutrição"
+  },
+  {
+    "id": 15,
+    "nome_arquivo": "indicador_19",
+    "titulo": "Indicador 19. Cobertura populacional estimada de saúde bucal na atenção básica. \nPeríodo: 2015 a novembro de 2020",
+    "subtitulo": "Proposto Escalonamento",
+    "fonte": "Fonte: Ministério da Saúde/DAB. Disponível em: https://egestorab.saude.gov.br/paginas/acessoPublico/relatorios/relHistoricoCoberturaSB.xhtml"
+  },
+  {
+    "id": 16,
+    "nome_arquivo": "indicador_23",
+    "titulo": "Indicador 23. Percentual de Preenchimento da variável ocupação, das notificações de acidente trabalho, acidente de trabalho com  exposição a Material Biológico e Intoxicação Exógena Ocupacional, segundo município de RESIDÊNCIA. Estado da Bahia, 2010 - 2020*",
+    "subtitulo": "Meta Estadual: 95%",
+    "fonte": "Fonte: Sesab/Suvisa/DIVAST - Sinan"
+  }
+]
