@@ -138,10 +138,24 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
         const marker = L.marker(
           [estabelecimento.latitude_estabelecimento_decimo_grau, 
            estabelecimento.longitude_estabelecimento_decimo_grau]
-        ).bindPopup(`
-          <b>${estabelecimento.nome_fantasia}</b><br>
-          ${estabelecimento.endereco_estabelecimento}
-        `);
+        );
+
+        let popupContent = `<b>${estabelecimento.nome_fantasia}</b><br>`;
+
+        if (estabelecimento.tipo_unidade) {
+          popupContent += `Tipo: ${estabelecimento.tipo_unidade} <br>`;
+        }
+        if (estabelecimento.numero_telefone_estabelecimento) {
+          popupContent += `Telefone: ${estabelecimento.numero_telefone_estabelecimento} <br>`;
+        }
+        if (estabelecimento.razao_social) {
+          popupContent += `Razão Social: ${estabelecimento.razao_social} <br>`;
+        }
+        if (estabelecimento.endereco_estabelecimento) {
+          popupContent += `${estabelecimento.endereco_estabelecimento}`;
+        }
+
+        marker.bindPopup(popupContent);
 
         this.allMarkers.push(marker);
         
