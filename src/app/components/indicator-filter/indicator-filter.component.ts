@@ -63,7 +63,7 @@ export class IndicatorFilterComponent implements OnInit {
   }
 
   private populateYears() {
-    this.years = Array.from({length: 10}, (_, i) => 2010 + i);
+    this.years = Array.from({length: 11}, (_, i) => 2010 + i);
   }
 
   private loadIndicators() {

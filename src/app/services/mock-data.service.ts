@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../enviroments/enviroment.prod';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,37 +10,36 @@ export class MockDataService {
   constructor(private http: HttpClient) {}
 
   getIndicadores(): Observable<any> {
-    if (environment.useMockData) {
-      return this.http.get('assets/mocks/indicadores.json');
-    }
-    return this.http.get(`${environment.apiUrl}/indicadores/`);
+    return this.getData(`${environment.apiUrl}/indicadores/`, 'assets/mocks/indicadores.json');
   }
 
   getTiposUnidade(): Observable<any> {
-    if (environment.useMockData) {
-      return this.http.get('assets/mocks/tipos-unidade.json');
-    }
-    return this.http.get(`${environment.apiUrl}/tipos_unidade/`);
+    return this.getData(`${environment.apiUrl}/tipos_unidade/`, 'assets/mocks/tipos-unidade.json');
   }
 
   getCidades(): Observable<any> {
-    if (environment.useMockData) {
-      return this.http.get('assets/mocks/cidades.json');
-    }
-    return this.http.get(`${environment.apiUrl}/cidades/`);
+    return this.getData(`${environment.apiUrl}/cidades/`, 'assets/mocks/cidades.json');
   }
 
   getMapData(indicadorId: string, ano: string): Observable<any> {
-    if (environment.useMockData) {
-      return this.http.get(`assets/mocks/map-data/indicator-${indicadorId}-${ano}.json`);
-    }
-    return this.http.get(`${environment.apiUrl}/generate_map/?id_indicador=${indicadorId}&ano=${ano}`);
+    return this.getData(`assets/mocks/map-data/indicator-${indicadorId}-${ano}.json`, `${environment.apiUrl}/generate_map/?id_indicador=${indicadorId}&ano=${ano}`);
   }
 
   getEstabelecimentos(params: any): Observable<any> {
+    return this.getDataWithParams(`${environment.apiUrl}/estabelecimentos/`, `assets/mocks/estabelecimentos/${params.codigo_municipio}.json`, params);
+  }
+
+  getData(apiUrl: string, mockUrl: string): Observable<any> {
     if (environment.useMockData) {
-      return this.http.get(`assets/mocks/estabelecimentos/${params.codigo_municipio}.json`);
+      return this.http.get(mockUrl);
     }
-    return this.http.get(`${environment.apiUrl}/estabelecimentos/`, { params });
+    return this.http.get(apiUrl);
+  }
+
+  getDataWithParams(apiUrl: string, mockUrl: string, params: any): Observable<any> {
+    if (environment.useMockData) {
+      return this.http.get(mockUrl);
+    }
+    return this.http.get(apiUrl, { params });
   }
 }
