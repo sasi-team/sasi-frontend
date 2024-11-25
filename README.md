@@ -7,7 +7,7 @@
 
 <div align="center">
     <a href="https://github.com/sasi-team/sasi-frontend" target="_blank">
-        <img src="./public/assets/logo.png" 
+        <img src="./public/assets/LOGO_BG.png" 
         alt="Logo" width="200" height="200">
     </a>
 </div>
