@@ -20,6 +20,10 @@
 
 O **SASI (Sistema de Análise em Saúde Integrada)** é uma plataforma tecnológica que centraliza dados da saúde pública brasileira, com o objetivo de fornecer insights analíticos e promover uma gestão mais eficiente e baseada em evidências. Entre suas funcionalidades estão mapas interativos e dashboards que permitem visualizações estratégicas de dados georreferenciados e indicadores de saúde.
 
+## Deploy da Aplicação
+
+Confira o SASI acessando o link a seguir: [SASI](https://sasi-frontend.vercel.app/).
+
 ### Módulos Principais
 
 #### 1. Mapa de Calor dos Estabelecimentos de Saúde
@@ -39,7 +43,7 @@ Este módulo permite a exibição de indicadores de saúde extraídos de um arqu
 
 Inclui um carrossel dinâmico que exibe notícias da API do IBGE, com possibilidade de futuras integrações com APIs de órgãos de saúde. Esta funcionalidade pode ser acessada em `/home` após o usuário entrar no sistema na área logada.
 
-A API de Notícias pode ser acessada no link a seguir:
+O serviço de notícias utilizado pode ser acessado no link a seguir:
 
 - [Api de Notícias IBGE](https://servicodados.ibge.gov.br/api/docs/noticias?versao=3)
 
@@ -49,11 +53,20 @@ Essas funcionalidades são relevantes para gestores de saúde porque fornecem um
 
 ### Instruções para Rodar o Projeto
 
-## Observação: acesso ao sistema (login)
+**Observação: acesso ao sistema (login)**
 
-Atualmente, qualquer combinação de usuário e senha permite acesso ao sistema, pois o serviço de autenticação está em desenvolvimento.
+Atualmente, qualquer combinação de usuário e senha permite acesso ao sistema, pois o serviço de autenticação está em desenvolvimento. Ex.:
+
+- Email: sasi@admin.com
+- Senha: 123456
 
 #### Com API
+
+**Observação: Caso opte por essa alternativa, baixe o repositório back-end e siga as instruções do link abaixo:**
+
+- [Repositório Backend | Sasi-API](https://github.com/sasi-team/sasi-api)
+
+**Prossiga com:**
 
 1. Clone o repositório:
    ```bash
@@ -91,7 +104,9 @@ Atualmente, qualquer combinação de usuário e senha permite acesso ao sistema,
    npm install
    ```
 4. Configure o ambiente:
+
    - Acesse a pasta `src/environments` e altere o valor de `useMockData` no arquivo `environment.ts` para `false`.
+
 5. Inicie o servidor com dados mockados:
    ```bash
    npm start
