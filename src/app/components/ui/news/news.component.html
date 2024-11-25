@@ -1,0 +1,67 @@
+<div
+  class="bg-gradient-to-b from-gray-100 to-gray-300 shadow-lg rounded-lg p-4"
+>
+  <!-- Título -->
+  <div class="flex justify-center mt-2">
+    <h2 class="!text-lg sm:!text-xl !text-primary-color !font-semibold">
+      Últimas Notícias
+    </h2>
+  </div>
+
+  <!-- Controles de navegação e carrossel -->
+  <div class="flex items-center gap-2 mt-4">
+    <!-- Botão de navegação para a esquerda -->
+    <button
+      mat-icon-button
+      class="!bg-primary-color !text-white !rounded-full"
+      (click)="navigate('prev')"
+      [disabled]="currentPage === 1 || loading"
+    >
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+
+    <!-- Carrossel -->
+    <div
+      class="flex overflow-hidden gap-6 py-4 justify-center w-full max-w-full"
+    >
+      <mat-card
+        *ngFor="let news of displayedNews"
+        class="!flex-shrink-0 !w-72 sm:!w-80 !bg-gray-200 !shadow-md !rounded-lg cursor-pointer transition-transform duration-300 hover:-translate-y-2"
+        (click)="redirectToNews(news.link)"
+      >
+        <img
+          mat-card-image
+          [src]="news.imagens"
+          [alt]="news.titulo"
+          class="h-48 object-cover"
+        />
+        <mat-card-content>
+          <h3 class="text-lg font-bold !text-primary-color truncate mt-2">
+            {{ news.titulo }}
+          </h3>
+          <p class="text-sm !text-primary-color/80 mt-2">
+            {{ news.data_publicacao }}
+          </p>
+          <p class="text-sm !text-primary-color/80 mt-2">
+            {{ news.introducao }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Botão de navegação para a direita -->
+    <button
+      mat-icon-button
+      class="!bg-primary-color !text-white rounded-full"
+      (click)="navigate('next')"
+      [disabled]="loading"
+    >
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+
+  <!-- Indicador de carregamento -->
+  <div *ngIf="loading" class="flex items-center justify-center w-full mt-4">
+    <mat-spinner diameter="30"></mat-spinner>
+  </div>
+</div>

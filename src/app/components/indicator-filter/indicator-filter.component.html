@@ -1,0 +1,38 @@
+<div
+  class="!controls !grid !grid-cols-1 md:!grid-cols-4 !gap-4 !p-6 !bg-gradient-to-r !from-gray-100 !to-gray-200/90 !shadow-md !rounded-lg !border !border-primary-color/20"
+>
+  <!-- Campo Indicador -->
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label class="!text-primary-color">Indicador</mat-label>
+    <mat-select [(ngModel)]="selectedIndicator">
+      <mat-option *ngFor="let indicator of indicators" [value]="indicator.id">
+        {{ indicator.titulo }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Campo Ano -->
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label class="!text-primary-color">Ano</mat-label>
+    <mat-select [(ngModel)]="selectedYear">
+      <mat-option *ngFor="let year of years" [value]="year">
+        {{ year }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Botão Buscar -->
+  <div
+    class="flex justify-center items-center space-x-4 col-span-1 md:col-span-2"
+  >
+    <button
+      mat-raised-button
+      class="!bg-primary-color !text-white hover:!bg-secondary-color transition-all duration-300 flex items-center space-x-2"
+      (click)="onSubmit()"
+      [disabled]="!selectedIndicator || !selectedYear"
+    >
+      <mat-icon>search</mat-icon>
+      <span>Buscar</span>
+    </button>
+  </div>
+</div>

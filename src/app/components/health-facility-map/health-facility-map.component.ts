@@ -12,15 +12,9 @@ import { Observable, Subscription } from 'rxjs';
   imports: [
     CommonModule,
   ],
-  template: `
-    <div [id]="mapId" style="height: 400px;"></div>
-    <button *ngIf="areFiltersFilled()" (click)="toggleMarkers()">Toggle Markers</button>
-  `,
-  styles: [`
-    #map {
-      height: 500px;
-    }
-  `]
+  templateUrl: './health-facility-map.component.html',
+  styleUrl: './health-facility-map.component.css'
+
 })
 export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy, AfterViewInit {
   @Input() filters!: EstabelecimentosDeSaude;
@@ -33,7 +27,7 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
   private toggleMarkersSubscription!: Subscription;
   mapId = 'map-' + Math.random().toString(36).substr(2, 9);
 
-  constructor(private _service: EstabelecimentosSaudeService) {}
+  constructor(private _service: EstabelecimentosSaudeService) { }
 
   ngOnInit() {
     if (this.toggleMarkersEvent) {
@@ -75,7 +69,7 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
       (mapContainer as any)._leaflet_id = null;
     }
     this.map = L.map(this.mapId).setView([-14.8639, -40.8243], 5);
-    
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);

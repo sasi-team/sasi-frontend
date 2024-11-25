@@ -6,6 +6,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { Indicator } from '../../models/indicator.model';
 import { IndicadoresService } from '../../services/indicadores.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-indicator-filter',
@@ -15,47 +16,21 @@ import { IndicadoresService } from '../../services/indicadores.service';
     FormsModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
-  template: `
-    <div class="bg-white p-4 rounded-lg shadow mb-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <mat-form-field>
-          <mat-label>Indicador</mat-label>
-          <mat-select [(ngModel)]="selectedIndicator">
-            <mat-option *ngFor="let indicator of indicators" [value]="indicator.id">
-              {{indicator.titulo}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <mat-form-field>
-          <mat-label>Ano</mat-label>
-          <mat-select [(ngModel)]="selectedYear">
-            <mat-option *ngFor="let year of years" [value]="year">
-              {{year}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <button mat-raised-button color="primary" 
-                (click)="onSubmit()"
-                [disabled]="!selectedIndicator || !selectedYear">
-          Buscar
-        </button>
-      </div>
-    </div>
-  `
+  templateUrl: './indicator-filter.component.html',
+  styleUrl: './indicator-filter.component.css',
 })
 export class IndicatorFilterComponent implements OnInit {
-  @Output() filter = new EventEmitter<{indicador: string, ano: string}>();
-  
+  @Output() filter = new EventEmitter<{ indicador: string, ano: string }>();
+
   indicators: Indicator[] = [];
   years: number[] = [];
   selectedIndicator: string = '';
   selectedYear: string = '';
 
-  constructor(private indicatorService: IndicadoresService) {}
+  constructor(private indicatorService: IndicadoresService) { }
 
   ngOnInit() {
     this.loadIndicators();
@@ -63,7 +38,7 @@ export class IndicatorFilterComponent implements OnInit {
   }
 
   private populateYears() {
-    this.years = Array.from({length: 10}, (_, i) => 2010 + i);
+    this.years = Array.from({ length: 10 }, (_, i) => 2010 + i);
   }
 
   private loadIndicators() {
