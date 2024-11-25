@@ -1,49 +1,76 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable, throwError, of } from "rxjs";
+import { catchError, map, tap, retry } from "rxjs/operators";
 import { Indicator, MapData } from '../models/indicator.model';
-import { environment } from '../../enviroments/enviroment.prod';
+import { environment } from "../../environments/environment";
+import { MockDataService } from './mock-data.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IndicadoresService {
   private baseUrl = environment.apiUrl;
+  private cache: Map<string, any> = new Map();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private mockDataService: MockDataService) { }
 
-  getIndicators(): Observable<Indicator[]> {
-    return this.http.get<Indicator[]>('assets/mocks/indicadores.json')
-      .pipe(
-        retry(3),
-        catchError(this.handleError)
-      );
-  }
-
-  getMapData(indicadorId: string, ano: string): Observable<MapData> {
-    if (!indicadorId || !ano) {
-      return throwError(() => new Error('Indicador e ano são obrigatórios'));
+  getMapData(indicador: string, ano: string): Observable<MapData> {
+    if (!indicador || !ano) {
+      return throwError(() => new Error('Indicador and ano are required'));
     }
 
-    return this.http.get<MapData>(
-      `${this.baseUrl}/assets/mocks/map-data/indicator-${indicadorId}-${ano}.json`
-    ).pipe(
+    const cacheKey = `mapData-${indicador}-${ano}`;
+
+    if (environment.useMockData) {
+      return this.http.get<MapData>(`assets/mocks/map-data/indicator-${indicador}-${ano}.json`).pipe(
+        catchError(error => this.handleError<MapData>('getMapData')(error))
+      );
+    }
+
+    if (this.cache.has(cacheKey)) {
+      return of(this.cache.get(cacheKey) as MapData);
+    }
+
+    const apiUrl = `${this.baseUrl}/generate_map/?id_indicador=${indicador}&ano=${ano}`;
+    const mockUrl = `assets/mocks/map-data/indicator-${indicador}-${ano}.json`;
+
+    return this.mockDataService.getData(apiUrl, mockUrl).pipe(
       retry(3),
-      catchError(this.handleError)
+      tap(data => this.cache.set(cacheKey, data)),
+      map(response => response as MapData),
+      catchError(this.handleError<MapData>('getMapData'))
     );
   }
 
-  private handleError(error: HttpErrorResponse) {
-    let errorMessage = 'An error occurred';
-
-    if (error.error instanceof ErrorEvent) {
-      errorMessage = `Error: ${error.error.message}`;
-    } else {
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+  getIndicators(): Observable<Indicator[]> {
+    const cacheKey = 'indicators';
+  
+    if (environment.useMockData) {
+      return this.http.get<Indicator[]>('assets/mocks/indicadores.json').pipe(
+        map(response => response as Indicator[]),
+        catchError(this.handleError<Indicator[]>('getIndicators', []))
+      );
     }
+  
+    if (this.cache.has(cacheKey)) {
+      return of(this.cache.get(cacheKey) as Indicator[]);
+    }
+  
+    const apiUrl = `${this.baseUrl}/indicadores/`;
+    const mockUrl = 'assets/mocks/indicadores.json';
 
-    console.error(errorMessage);
-    return throwError(() => new Error(errorMessage));
+    return this.mockDataService.getData(apiUrl, mockUrl).pipe(
+      retry(3),
+      tap(indicators => this.cache.set(cacheKey, indicators)),
+      catchError(this.handleError<Indicator[]>('getIndicators', []))
+    );
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(`${operation} failed:`, error);
+      return throwError(() => new Error(`${operation} failed: ${error.message}`));
+    };
   }
 }

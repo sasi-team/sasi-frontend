@@ -43,7 +43,6 @@ export class MapComponent implements OnInit {
     const url = 'http://localhost:8000/api/indicadores/';
     this.http.get(url).subscribe((data: any) => {
       this.indicadores = data;
-      console.log(this.indicadores);
     });
   }
 

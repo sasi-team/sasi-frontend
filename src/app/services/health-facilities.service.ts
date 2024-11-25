@@ -3,7 +3,8 @@ import { Injectable } from "@angular/core";
 import { Observable, throwError, of } from "rxjs";
 import { catchError, map, tap } from "rxjs/operators";
 import { Cidade, EstabelecimentoResponse, EstabelecimentosDeSaude, TipoUnidade } from "../models/health-facility.model";
-import { environment } from "../../enviroments/enviroment.prod";
+import { environment } from "../../environments/environment";
+import { MockDataService } from './mock-data.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class EstabelecimentosSaudeService {
   private baseUrl = environment.apiUrl;
   private cache: Map<string, any> = new Map();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private mockDataService: MockDataService) {}
 
   getEstabelecimentos(params: EstabelecimentosDeSaude = {}): Observable<any> {
     if (environment.useMockData) {
@@ -38,17 +39,19 @@ export class EstabelecimentosSaudeService {
       return of(this.cache.get(cacheKey));
     }
 
-    return this.http.get(`${this.baseUrl}/estabelecimentos/`, { params: httpParams })
-      .pipe(
-        tap(response => this.cache.set(cacheKey, response)),
-        catchError(this.handleError('getEstabelecimentos'))
-      );
+    const apiUrl = `${this.baseUrl}/estabelecimentos/`;
+    const mockUrl = 'assets/mocks/estabelecimentos.json';
+
+    return this.mockDataService.getDataWithParams(apiUrl, mockUrl, httpParams).pipe(
+      tap(response => this.cache.set(cacheKey, response)),
+      catchError(this.handleError('getEstabelecimentos'))
+    );
   }
 
   getPaginatedHealthFacilities(
     params: EstabelecimentosDeSaude = {}, 
     pageSize: number = 100,
-    maxItems: number = 1000 // Limit total items to prevent memory issues
+    maxItems: number = 1000
   ): Observable<EstabelecimentosDeSaude[]> {
     if (environment.useMockData) {
       return this.http.get<{ estabelecimentos: EstabelecimentosDeSaude[] }>('assets/mocks/estabelecimentos.json')
@@ -105,12 +108,14 @@ export class EstabelecimentosSaudeService {
       return of(this.cache.get(cacheKey));
     }
 
-    return this.http.get<{ cidades: Cidade[] }>(`${this.baseUrl}/cidades/`)
-      .pipe(
-        map(response => response.cidades),
-        tap(cidades => this.cache.set(cacheKey, cidades)),
-        catchError(this.handleError('getCidades', []))
-      );
+    const apiUrl = `${this.baseUrl}/cidades/`;
+    const mockUrl = 'assets/mocks/cidades.json';
+
+    return this.mockDataService.getData(apiUrl, mockUrl).pipe(
+      map(response => response.cidades),
+      tap(cidades => this.cache.set(cacheKey, cidades)),
+      catchError(this.handleError('getCidades', []))
+    );
   }
 
   getTiposUnidade(): Observable<TipoUnidade[]> {
@@ -125,12 +130,14 @@ export class EstabelecimentosSaudeService {
       return of(this.cache.get(cacheKey));
     }
 
-    return this.http.get<{ tipos_unidade: TipoUnidade[] }>(`${this.baseUrl}/tipos_unidade/`)
-      .pipe(
-        map(response => response.tipos_unidade),
-        tap(tipos => this.cache.set(cacheKey, tipos)),
-        catchError(this.handleError('getTiposUnidade', []))
-      );
+    const apiUrl = `${this.baseUrl}/tipos_unidade/`;
+    const mockUrl = 'assets/mocks/tipos-unidade.json';
+
+    return this.mockDataService.getData(apiUrl, mockUrl).pipe(
+      map(response => response.tipos_unidade),
+      tap(tipos => this.cache.set(cacheKey, tipos)),
+      catchError(this.handleError('getTiposUnidade', []))
+    );
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

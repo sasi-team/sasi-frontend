@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges, OnDestroy, AfterViewInit } from '@angular/core';
 import * as L from 'leaflet';
-import 'leaflet.heat';
+import 'leaflet.markercluster';
 import { EstabelecimentoResponse, EstabelecimentosDeSaude } from '../../models/health-facility.model';
 import { EstabelecimentosSaudeService } from '../../services/health-facilities.service';
 import { CommonModule } from '@angular/common';
@@ -21,11 +21,13 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
   @Input() cityCoordinates!: { latitude: number, longitude: number };
   @Input() displayMarkers: boolean = false;
   @Input() toggleMarkersEvent!: Observable<boolean>;
+  
   private map!: L.Map;
-  private healthFacilitiesLayer!: L.LayerGroup;
+  private markerClusterGroup!: L.MarkerClusterGroup;
   private markersLayer!: L.LayerGroup;
   private toggleMarkersSubscription!: Subscription;
   mapId = 'map-' + Math.random().toString(36).substr(2, 9);
+  private allMarkers: L.Marker[] = [];
 
   constructor(private _service: EstabelecimentosSaudeService) { }
 
@@ -33,7 +35,7 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
     if (this.toggleMarkersEvent) {
       this.toggleMarkersSubscription = this.toggleMarkersEvent.subscribe(showMarkers => {
         this.displayMarkers = showMarkers;
-        this.loadHealthFacilities();
+        this.updateMarkersDisplay();
       });
     }
   }
@@ -44,7 +46,9 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['filters'] && changes['filters'].currentValue) {
-      this.loadHealthFacilities();
+      if (this.markerClusterGroup && this.markersLayer) {
+        this.loadHealthFacilities();
+      }
     }
     if (changes['cityCoordinates'] && changes['cityCoordinates'].currentValue) {
       this.zoomToCity(changes['cityCoordinates'].currentValue);
@@ -64,18 +68,29 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
     if (this.map) {
       this.map.remove();
     }
+
     const mapContainer = document.getElementById(this.mapId);
     if (mapContainer) {
       (mapContainer as any)._leaflet_id = null;
     }
+
     this.map = L.map(this.mapId).setView([-14.8639, -40.8243], 5);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
 
-    this.healthFacilitiesLayer = L.layerGroup().addTo(this.map);
-    this.markersLayer = L.layerGroup().addTo(this.map);
+    // Initialize cluster group with custom options
+    this.markerClusterGroup = L.markerClusterGroup({
+      chunkedLoading: true,
+      maxClusterRadius: 50,
+      spiderfyOnMaxZoom: true,
+      showCoverageOnHover: true,
+      zoomToBoundsOnClick: true
+    });
+
+    this.markersLayer = L.layerGroup();
+    this.map.addLayer(this.markerClusterGroup);
   }
 
   private loadHealthFacilities() {
@@ -89,79 +104,90 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
       Object.entries(params).filter(([_, v]) => v != null && v !== '')
     );
 
-    if (this.healthFacilitiesLayer) {
-      this.healthFacilitiesLayer.clearLayers();
+    if (this.markerClusterGroup && this.markersLayer) {
+      this.clearMarkers();
     }
-
     this.fetchAndPlotHealthFacilities(filteredParams);
   }
 
   private fetchAndPlotHealthFacilities(params: EstabelecimentosDeSaude) {
     this._service.getEstabelecimentos(params).subscribe((response: EstabelecimentoResponse) => {
       const newEstabelecimentos = response.estabelecimentos;
-
-      if (this.displayMarkers) {
-        this.addMarkers(newEstabelecimentos);
-      } else {
-        this.updateHeatmap(newEstabelecimentos);
-      }
+      this.addMarkersToMap(newEstabelecimentos);
 
       if (newEstabelecimentos.length === params.limit) {
         params.offset = (params.offset || 0) + params.limit;
         this.fetchAndPlotHealthFacilities(params);
-      } else {
-        console.log('All establishments loaded');
       }
     });
   }
 
-  private updateHeatmap(estabelecimentos: any[]) {
-    if (!this.map) return;
-
-    const zoomLevel = this.map.getZoom();
-    const intensity = zoomLevel > 10 ? 1 : 5;
-
-    const heatData = estabelecimentos
-      .filter(estabelecimento => estabelecimento.latitude_estabelecimento_decimo_grau && estabelecimento.longitude_estabelecimento_decimo_grau)
-      .map(estabelecimento => [
-        estabelecimento.latitude_estabelecimento_decimo_grau,
-        estabelecimento.longitude_estabelecimento_decimo_grau,
-        intensity
-      ]);
-
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d', { willReadFrequently: true });
-
-    const heat = (L as any).heatLayer(heatData, { radius: 25, context }).addTo(this.map);
-
-    if (this.healthFacilitiesLayer) {
-      this.healthFacilitiesLayer.addLayer(heat);
-    }
-  }
-
-  private addMarkers(estabelecimentos: any[]) {
-    if (!this.map) return;
-
-    if (this.markersLayer) {
-      this.markersLayer.clearLayers();
-    }
-
+  private addMarkersToMap(estabelecimentos: any[]) {
     estabelecimentos.forEach(estabelecimento => {
-      if (estabelecimento.latitude_estabelecimento_decimo_grau && estabelecimento.longitude_estabelecimento_decimo_grau) {
-        const marker = L.marker([estabelecimento.latitude_estabelecimento_decimo_grau, estabelecimento.longitude_estabelecimento_decimo_grau], {
-        }).bindPopup(`<b>${estabelecimento.nome_fantasia}</b><br>${estabelecimento.endereco_estabelecimento}`);
-        this.markersLayer.addLayer(marker);
+      if (estabelecimento.latitude_estabelecimento_decimo_grau && 
+          estabelecimento.longitude_estabelecimento_decimo_grau) {
+        
+        const marker = L.marker(
+          [estabelecimento.latitude_estabelecimento_decimo_grau, 
+           estabelecimento.longitude_estabelecimento_decimo_grau]
+        );
+
+        let popupContent = `<b>${estabelecimento.nome_fantasia}</b><br>`;
+
+        if (estabelecimento.tipo_unidade) {
+          popupContent += `Tipo: ${estabelecimento.tipo_unidade} <br>`;
+        }
+        if (estabelecimento.numero_telefone_estabelecimento) {
+          popupContent += `Telefone: ${estabelecimento.numero_telefone_estabelecimento} <br>`;
+        }
+        if (estabelecimento.razao_social) {
+          popupContent += `Razão Social: ${estabelecimento.razao_social} <br>`;
+        }
+        if (estabelecimento.endereco_estabelecimento) {
+          popupContent += `${estabelecimento.endereco_estabelecimento}`;
+        }
+
+        marker.bindPopup(popupContent);
+
+        this.allMarkers.push(marker);
+        
+        if (this.displayMarkers) {
+          this.markersLayer.addLayer(marker);
+        } else {
+          this.markerClusterGroup.addLayer(marker);
+        }
       }
     });
+
+    this.updateMarkersDisplay();
+  }
+
+  private clearMarkers() {
+    this.markerClusterGroup.clearLayers();
+    this.markersLayer.clearLayers();
+    this.allMarkers = [];
+  }
+
+  private updateMarkersDisplay() {
+    this.markerClusterGroup.clearLayers();
+    this.markersLayer.clearLayers();
+    
+    if (this.displayMarkers) {
+      this.map.removeLayer(this.markerClusterGroup);
+      this.allMarkers.forEach(marker => this.markersLayer.addLayer(marker));
+      this.map.addLayer(this.markersLayer);
+    } else {
+      this.map.removeLayer(this.markersLayer);
+      this.allMarkers.forEach(marker => this.markerClusterGroup.addLayer(marker));
+      this.map.addLayer(this.markerClusterGroup);
+    }
   }
 
   private zoomToCity(coordinates: { latitude: number, longitude: number }) {
     if (this.map) {
-      if (coordinates.latitude === -14.8639 && coordinates.longitude === -40.8243) {
-        this.map.setView([coordinates.latitude, coordinates.longitude], 5);
-      } else {
-        this.map.setView([coordinates.latitude, coordinates.longitude], 12);
-      }
+      const zoom = coordinates.latitude === -14.8639 && 
+                  coordinates.longitude === -40.8243 ? 5 : 12;
+      this.map.setView([coordinates.latitude, coordinates.longitude], zoom);
     }
   }
 
@@ -171,6 +197,6 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
 
   toggleMarkers() {
     this.displayMarkers = !this.displayMarkers;
-    this.loadHealthFacilities();
+    this.updateMarkersDisplay();
   }
 }
