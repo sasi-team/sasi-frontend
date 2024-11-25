@@ -58,20 +58,4 @@
       <span>Limpar</span>
     </button>
   </div>
-
-  <!-- Checkbox Mostrar Marcadores -->
-  <div
-    *ngIf="
-      filterForm.get('cidade')!.value && filterForm.get('tipoUnidade')!.value
-    "
-    class="col-span-1 md:col-span-4 flex items-center"
-  >
-    <mat-checkbox
-      [(ngModel)]="showMarkers"
-      [ngModelOptions]="{ standalone: true }"
-      class="!text-primary-color"
-    >
-      Mostrar Marcadores
-    </mat-checkbox>
-  </div>
 </div>
