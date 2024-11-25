@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges, OnDestroy, AfterViewInit } from '@angular/core';
-import * as L from 'leaflet';
 import 'leaflet.markercluster';
+import * as L from 'leaflet';
 import { EstabelecimentoResponse, EstabelecimentosDeSaude } from '../../models/health-facility.model';
 import { EstabelecimentosSaudeService } from '../../services/health-facilities.service';
 import { CommonModule } from '@angular/common';
@@ -79,6 +79,11 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
+
+    if (typeof L.markerClusterGroup !== 'function') {
+      console.error('Erro: markerClusterGroup não está disponível.');
+      return;
+    }
 
     // Initialize cluster group with custom options
     this.markerClusterGroup = L.markerClusterGroup({
