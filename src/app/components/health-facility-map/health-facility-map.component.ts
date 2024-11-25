@@ -6,6 +6,10 @@ import { EstabelecimentosSaudeService } from '../../services/health-facilities.s
 import { CommonModule } from '@angular/common';
 import { Observable, Subscription } from 'rxjs';
 
+const iconRetinaUrl = 'assets/images/marker-icon-2x.png';
+const iconUrl = 'assets/images/marker-icon.png';
+const shadowUrl = 'assets/images/marker-shadow.png';
+
 @Component({
   selector: 'app-health-facility-map',
   standalone: true,
@@ -31,6 +35,16 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
 
   constructor(private _service: EstabelecimentosSaudeService) { }
 
+  private initializeLeafletIcons() {
+    const iconDefault = L.Icon.Default.prototype;
+    iconDefault.options.imagePath = '';
+    L.Icon.Default.mergeOptions({
+      iconRetinaUrl,
+      iconUrl,
+      shadowUrl
+    });
+  }
+
   ngOnInit() {
     if (this.toggleMarkersEvent) {
       this.toggleMarkersSubscription = this.toggleMarkersEvent.subscribe(showMarkers => {
@@ -42,6 +56,11 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
 
   ngAfterViewInit() {
     this.initializeMap();
+    this.map.whenReady(() => {
+      if (this.filters) {
+        this.loadHealthFacilities();
+      }
+    });
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -73,9 +92,11 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
     if (mapContainer) {
       (mapContainer as any)._leaflet_id = null;
     }
-
+    
     this.map = L.map(this.mapId).setView([-14.8639, -40.8243], 5);
 
+    this.initializeLeafletIcons();
+    
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
@@ -85,7 +106,6 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
       return;
     }
 
-    // Initialize cluster group with custom options
     this.markerClusterGroup = L.markerClusterGroup({
       chunkedLoading: true,
       maxClusterRadius: 50,
@@ -134,7 +154,8 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
         
         const marker = L.marker(
           [estabelecimento.latitude_estabelecimento_decimo_grau, 
-           estabelecimento.longitude_estabelecimento_decimo_grau]
+           estabelecimento.longitude_estabelecimento_decimo_grau],
+          { icon: new L.Icon.Default() }
         );
 
         let popupContent = `<b>${estabelecimento.nome_fantasia}</b><br>`;
