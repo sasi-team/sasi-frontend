@@ -11,12 +11,14 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
-import { PublicLayoutComponent } from './layouts/public-layout/public-layout.component';
 import { routes } from './app.routes';
+import { FormsModule } from '@angular/forms';
+import { HeroComponent } from './components/ui/hero/hero.component';
 
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatSidenavModule,
@@ -26,7 +28,6 @@ import { routes } from './app.routes';
     MatButtonModule,
     RouterModule.forRoot(routes),
     MainLayoutComponent,
-    PublicLayoutComponent,
     AppComponent
   ],
   providers: [],

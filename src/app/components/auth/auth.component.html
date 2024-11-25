@@ -1,0 +1,94 @@
+<section
+  class="bg-background-color flex items-center justify-center min-h-screen px-4"
+>
+  <div
+    class="container max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center md:items-start"
+  >
+    <!-- Texto informativo com ícone (oculto em telas menores) -->
+    <div class="hidden md:flex flex-col items-center">
+      <img src="/assets/icon.png" alt="Ícone SASI" class="w-72 h-52 mb-2" />
+      <p
+        class="text-primary-color text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center"
+      >
+        S<span class="text-secondary-color">A</span>S<span
+          class="text-secondary-color"
+          >I</span
+        >
+      </p>
+      <p class="mt-4 text-lg leading-relaxed text-gray-700 text-center">
+        O SASI ajuda gestores em saúde pública a tomarem decisões estratégicas e
+        baseadas em dados para melhorar a vida das pessoas.
+      </p>
+    </div>
+
+    <!-- Formulário de login -->
+    <div
+      class="bg-white shadow-lg rounded-xl p-8 w-full max-w-lg mx-auto border border-gray-200 relative"
+    >
+      <!-- Exibição da imagem em telas menores -->
+      <img
+        src="/assets/logo.png"
+        alt="Logo SASI"
+        class="block md:hidden w-32 mx-auto mb-6"
+      />
+
+      <h2 class="text-3xl font-semibold text-center text-primary-color mb-6">
+        Acesse o S<span class="text-secondary-color">A</span>S<span
+          class="text-secondary-color"
+          >I</span
+        >
+      </h2>
+      <form #loginForm="ngForm" (ngSubmit)="onLogin()" class="space-y-6">
+        <div>
+          <label
+            class="block text-sm font-medium text-primary-color mb-1"
+            for="username"
+            >E-mail</label
+          >
+          <mat-form-field class="w-full" appearance="outline">
+            <input
+              matInput
+              id="username"
+              placeholder="Digite seu e-mail"
+              name="username"
+              [(ngModel)]="username"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div>
+          <label
+            class="block text-sm font-medium text-primary-color mb-1"
+            for="password"
+            >Senha</label
+          >
+          <mat-form-field class="w-full" appearance="outline">
+            <input
+              matInput
+              type="password"
+              id="password"
+              placeholder="Digite sua senha"
+              name="password"
+              [(ngModel)]="password"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <button
+          mat-raised-button
+          type="submit"
+          class="w-full py-3 !rounded-lg !bg-primary-color !text-white !font-semibold !text-lg hover:!bg-secondary-color !transition-all !duration-300"
+        >
+          Entrar
+        </button>
+        <div class="text-center text-sm !mt-4">
+          <a
+            href="#"
+            class="text-primary-color hover:underline hover:!text-secondary-color"
+            >Esqueceu a senha?</a
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

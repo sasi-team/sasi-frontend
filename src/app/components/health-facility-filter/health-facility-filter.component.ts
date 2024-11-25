@@ -11,6 +11,7 @@ import { EstabelecimentosDeSaude, Cidade } from '../../models/health-facility.mo
 import { EstabelecimentosSaudeService } from '../../services/health-facilities.service';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-health-facility-filter',
@@ -24,40 +25,13 @@ import { map, startWith } from 'rxjs/operators';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatIconModule
   ],
-  template: `
-    <div class="controls grid grid-cols-1 md:grid-cols-4 gap-4 p-4 bg-white shadow-md rounded-lg" [formGroup]="filterForm">
-      <mat-form-field appearance="fill" class="w-full">
-        <mat-label>Cidade</mat-label> 
-        <input type="text" matInput formControlName="cidade" [matAutocomplete]="autoCidade">
-        <mat-autocomplete #autoCidade="matAutocomplete" (optionSelected)="onCityChange($event.option.value)">
-          <mat-option *ngFor="let cidade of filteredCidades | async" [value]="cidade.codigo_ibge">
-            {{ cidade.nome }}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
-      <mat-form-field appearance="fill" class="w-full">
-        <mat-label>Tipo de Unidade</mat-label>
-        <mat-select formControlName="tipoUnidade">
-          <mat-option *ngFor="let tipo of tiposUnidade" [value]="tipo.codigo_tipo_unidade">{{ tipo.descricao_tipo_unidade }}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <div class="flex justify-end space-x-4 col-span-1 md:col-span-2">
-        <button mat-raised-button color="primary" (click)="onFilter()">Buscar</button>
-        <button mat-raised-button color="warn" (click)="onClear()">Limpar</button>
-      </div>
-      <div *ngIf="filterForm.get('cidade')!.value && filterForm.get('tipoUnidade')!.value" class="col-span-1 md:col-span-4">
-        <mat-checkbox [(ngModel)]="showMarkers" [ngModelOptions]="{standalone: true}">Mostrar Marcadores</mat-checkbox>
-      </div>
-    </div>
-  `,
-  styles: [`
-    .controls {
-      margin: 20px;
-    }
-  `]
+  templateUrl: './health-facility-filter.component.html',
+  styleUrl: './health-facility-filter.component.css'
 })
+
 export class HealthFacilityFilterComponent implements OnInit {
   filterForm!: FormGroup;
 
@@ -72,7 +46,7 @@ export class HealthFacilityFilterComponent implements OnInit {
   showFilters = false;
   showMarkers = false;
 
-  constructor(private _service: EstabelecimentosSaudeService) {}
+  constructor(private _service: EstabelecimentosSaudeService) { }
 
   ngOnInit() {
     this.filterForm = new FormGroup({
