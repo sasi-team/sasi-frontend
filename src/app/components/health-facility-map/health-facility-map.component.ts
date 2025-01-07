@@ -5,6 +5,7 @@ import { EstabelecimentoResponse, EstabelecimentosDeSaude } from '../../models/h
 import { EstabelecimentosSaudeService } from '../../services/health-facilities.service';
 import { CommonModule } from '@angular/common';
 import { Observable, Subscription } from 'rxjs';
+import { ranemEstablishmentShift, firstLetterUpperCase } from '../../../assets/utils/health-facility-map-Function';
 
 const iconRetinaUrl = 'assets/images/marker-icon-2x.png';
 const iconUrl = 'assets/images/marker-icon.png';
@@ -157,21 +158,25 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
            estabelecimento.longitude_estabelecimento_decimo_grau],
           { icon: new L.Icon.Default() }
         );
-
-        let popupContent = `<b>${estabelecimento.nome_fantasia}</b><br>`;
-
-        if (estabelecimento.tipo_unidade) {
-          popupContent += `Tipo: ${estabelecimento.tipo_unidade} <br>`;
-        }
-        if (estabelecimento.numero_telefone_estabelecimento) {
-          popupContent += `Telefone: ${estabelecimento.numero_telefone_estabelecimento} <br>`;
-        }
-        if (estabelecimento.razao_social) {
-          popupContent += `Razão Social: ${estabelecimento.razao_social} <br>`;
-        }
-        if (estabelecimento.endereco_estabelecimento) {
-          popupContent += `${estabelecimento.endereco_estabelecimento}`;
-        }
+        let popupContent = `<b>${firstLetterUpperCase(estabelecimento.nome_fantasia).trim()}</b><br>`;
+        // Start Shift
+          estabelecimento.descricao_turno_atendimento ? popupContent += `<i>${ranemEstablishmentShift(estabelecimento.descricao_turno_atendimento)}</i><hr style="margin: 5px 0;">`: false;
+        // End Shift
+        // Start Address
+          estabelecimento.endereco_estabelecimento ? popupContent += `${firstLetterUpperCase(estabelecimento.endereco_estabelecimento).trimEnd()}` : false;
+          estabelecimento.numero_estabelecimento ? popupContent += `, ${estabelecimento.numero_estabelecimento}` : false;
+          estabelecimento.bairro_estabelecimento ? popupContent += `, ${firstLetterUpperCase(estabelecimento.bairro_estabelecimento).trimEnd()}` : false;
+          popupContent += `.`;
+        // End Address
+        // Start Contact
+          if (estabelecimento.numero_telefone_estabelecimento || estabelecimento.endereco_email_estabelecimento) {
+            popupContent += `<br><b>Contato:</b>`;
+            estabelecimento.numero_telefone_estabelecimento? popupContent += ` ${estabelecimento.numero_telefone_estabelecimento}` : '';
+            if (estabelecimento.endereco_email_estabelecimento) {
+              estabelecimento.numero_telefone_estabelecimento? popupContent += ` | ${estabelecimento.endereco_email_estabelecimento}` : popupContent += ` ${estabelecimento.endereco_email_estabelecimento}`;
+            }
+          }
+        // End Contact
 
         marker.bindPopup(popupContent);
 
