@@ -1,0 +1,17 @@
+.controls-panel {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* ...existing code... */
+}
+
+.select-group {
+  margin: 0.5rem;
+  /* ...existing code... */
+}
+
+@media (max-width: 768px) {
+  .controls-panel {
+    flex-direction: column;
+  }
+}

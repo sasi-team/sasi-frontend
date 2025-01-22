@@ -1,0 +1,61 @@
+<div
+  class="!controls !grid !grid-cols-1 md:!grid-cols-4 !gap-4 !p-6 !bg-gradient-to-r !from-gray-100 !to-gray-200/90 !shadow-md !rounded-lg !border !border-primary-color/20"
+  [formGroup]="filterForm"
+>
+  <!-- Campo Cidade -->
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label class="!text-primary-color">Cidade</mat-label>
+    <input
+      type="text"
+      matInput
+      formControlName="cidade"
+      [matAutocomplete]="autoCidade"
+      class="placeholder:!text-primary-color/50"
+    />
+    <mat-autocomplete
+      #autoCidade="matAutocomplete"
+      (optionSelected)="onCityChange($event.option.value)"
+    >
+      <mat-option
+        *ngFor="let cidade of filteredCidades | async"
+        [value]="cidade.codigo_ibge"
+      >
+        {{ cidade.nome }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <!-- Campo Tipo de Unidade -->
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label class="!text-primary-color">Tipo de Unidade</mat-label>
+    <mat-select formControlName="tipoUnidade">
+      <mat-option
+        *ngFor="let tipo of tiposUnidade"
+        [value]="tipo.codigo_tipo_unidade"
+        >{{ tipo.descricao_tipo_unidade }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Botões -->
+  <div
+    class="flex justify-center items-center space-x-4 col-span-1 md:col-span-2"
+  >
+    <button
+      mat-raised-button
+      class="!bg-primary-color !text-white hover:!bg-secondary-color transition-all duration-300 flex items-center space-x-2"
+      (click)="onFilter()"
+    >
+      <mat-icon>search</mat-icon>
+      <span>Buscar</span>
+    </button>
+    <button
+      mat-raised-button
+      class="!bg-primary-color !text-white hover:!bg-secondary-color transition-all duration-300 flex items-center space-x-2"
+      (click)="onClear()"
+    >
+      <mat-icon>clear</mat-icon>
+      <span>Limpar</span>
+    </button>
+  </div>
+</div>

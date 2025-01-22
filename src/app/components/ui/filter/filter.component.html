@@ -1,0 +1,21 @@
+<div class="filter-panel flex gap-2 p-4">
+  <mat-form-field appearance="fill" class=" mb-4">
+    <mat-label>Indicador</mat-label>
+    <mat-select [(ngModel)]="indicador">
+        @for (indicador of indicadores; track $index) {
+            <mat-option value="{{indicador.id}}">{{indicador.titulo}}</mat-option>
+        }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class=" mb-4">
+    <mat-label>Ano</mat-label>
+    <mat-select [(ngModel)]="ano">
+        @for (ano of anos; track $index) {
+            <mat-option value="{{ano}}">{{ano}}</mat-option>
+        }
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="search()" class="">Pesquisar</button>
+</div>
