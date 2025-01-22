@@ -26,7 +26,7 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
   @Input() cityCoordinates!: { latitude: number, longitude: number };
   @Input() displayMarkers: boolean = false;
   @Input() toggleMarkersEvent!: Observable<boolean>;
-  
+
   private map!: L.Map;
   private markerClusterGroup!: L.MarkerClusterGroup;
   private markersLayer!: L.LayerGroup;
@@ -93,11 +93,11 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
     if (mapContainer) {
       (mapContainer as any)._leaflet_id = null;
     }
-    
+
     this.map = L.map(this.mapId).setView([-14.8639, -40.8243], 5);
 
     this.initializeLeafletIcons();
-    
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
@@ -150,11 +150,11 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
 
   private addMarkersToMap(estabelecimentos: any[]) {
     estabelecimentos.forEach(estabelecimento => {
-      if (estabelecimento.latitude_estabelecimento_decimo_grau && 
+      if (estabelecimento.latitude_estabelecimento_decimo_grau &&
           estabelecimento.longitude_estabelecimento_decimo_grau) {
-        
+
         const marker = L.marker(
-          [estabelecimento.latitude_estabelecimento_decimo_grau, 
+          [estabelecimento.latitude_estabelecimento_decimo_grau,
            estabelecimento.longitude_estabelecimento_decimo_grau],
           { icon: new L.Icon.Default() }
         );
@@ -181,7 +181,7 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
         marker.bindPopup(popupContent);
 
         this.allMarkers.push(marker);
-        
+
         if (this.displayMarkers) {
           this.markersLayer.addLayer(marker);
         } else {
@@ -202,7 +202,7 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
   private updateMarkersDisplay() {
     this.markerClusterGroup.clearLayers();
     this.markersLayer.clearLayers();
-    
+
     if (this.displayMarkers) {
       this.map.removeLayer(this.markerClusterGroup);
       this.allMarkers.forEach(marker => this.markersLayer.addLayer(marker));
@@ -216,7 +216,7 @@ export class HealthFacilityMapComponent implements OnInit, OnChanges, OnDestroy,
 
   private zoomToCity(coordinates: { latitude: number, longitude: number }) {
     if (this.map) {
-      const zoom = coordinates.latitude === -14.8639 && 
+      const zoom = coordinates.latitude === -14.8639 &&
                   coordinates.longitude === -40.8243 ? 5 : 12;
       this.map.setView([coordinates.latitude, coordinates.longitude], zoom);
     }

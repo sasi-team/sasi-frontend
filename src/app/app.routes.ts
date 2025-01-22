@@ -4,6 +4,7 @@ import { LoginComponent } from './views/login/login.component';
 import { IndicadoresComponent } from './views/indicadores/indicadores.component';
 import { EstabelecimentosComponent } from './views/estabelecimentos/estabelecimentos.component';
 import { HomeComponent } from './views/home/home.component';
+import { SobreComponent } from './components/sobre/sobre.component';
 
 export const routes: Routes = [
   // TODO: Organizar modulos
@@ -30,6 +31,7 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent, title: 'Página Inicial | SASI ' },
   { path: 'indicadores', component: IndicadoresComponent, title: 'Indicadores de Saúde | SASI' },
   { path: 'estabelecimentos', component: EstabelecimentosComponent, title: 'Estabelecimentos de Saúde | SASI ' },
+  { path: 'sobre', component: SobreComponent, title: 'Sobre SASI'},
 
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'login', pathMatch: 'full' }
