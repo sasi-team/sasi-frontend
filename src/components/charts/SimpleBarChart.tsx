@@ -1,4 +1,4 @@
-'use client' // Recharts requer ambiente de cliente
+'use client'
 
 import {
   Bar,
@@ -9,6 +9,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 // TODO: Tipar os dados de forma mais robusta

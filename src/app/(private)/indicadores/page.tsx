@@ -1,3 +1,4 @@
+import { SimpleBarChart } from "@/components/charts/SimpleBarChart";
 import {
   Card,
   CardContent,
@@ -5,7 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { SimpleBarChart } from "@/components/charts/SimpleBarChart";
 
 // Dados de exemplo para os gráficos
 const sampleData1 = [

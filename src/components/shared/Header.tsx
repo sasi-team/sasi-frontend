@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { Button } from '@/components/ui/button';
 
 // TODO: Adicionar componente NavigationMenu do Shadcn se necessário

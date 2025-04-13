@@ -1,7 +1,8 @@
 import React from 'react';
+
 import { Footer } from '@/components/shared/Footer';
-import { Sidebar } from '@/components/shared/Sidebar';
 import { PrivateHeader } from '@/components/shared/PrivateHeader';
+import { Sidebar } from '@/components/shared/Sidebar';
 
 export default function PrivateLayout({
   children,

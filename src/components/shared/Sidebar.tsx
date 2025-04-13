@@ -1,17 +1,19 @@
-'use client' // Necessário para useState e usePathname
+'use client'
 
+import {
+    LayoutDashboard, 
+    Building,      
+    ChevronsLeft,  
+    ChevronsRight,
+    LucideIcon
+} from "lucide-react";
 import Link from "next/link";
-import { usePathname } from 'next/navigation'; // Para link ativo
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import {
-  LayoutDashboard, // Exemplo: Indicadores
-  Building,      // Exemplo: Estabelecimentos
-  ChevronsLeft,  // Ícone para recolher
-  ChevronsRight, // Ícone para expandir (ou o mesmo)
-  LucideIcon // Importa o tipo base LucideIcon
-} from "lucide-react";
+
 
 // Define um tipo para as chaves do iconMap
 type IconName = "Indicadores" | "Estabelecimentos";
