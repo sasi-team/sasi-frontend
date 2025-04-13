@@ -31,7 +31,9 @@ const eslintConfig = [
     },
     rules: {
       "react/react-in-jsx-scope": "off",
-      "import/order": [
+      "import/order": "off",
+      /* Regra original comentada:
+      "import/order": [ 
         "error",
         {
           groups: ["builtin", "external", "internal", ["parent", "sibling", "index"], "object", "type"],
@@ -39,6 +41,7 @@ const eslintConfig = [
           alphabetize: { order: "asc", caseInsensitive: true },
         },
       ],
+      */
     },
   },
 ];

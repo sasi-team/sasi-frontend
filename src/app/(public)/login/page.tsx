@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,10 +9,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { redirect } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export default function LoginPage() {
+
+  const onLogin = () => { 
+    // TODO: Implementar lógica de loguin
+    redirect('/indicadores')
+  }
+
   return (
     <div className="flex justify-center py-12">
       <Card className="w-full max-w-sm">
@@ -32,7 +41,7 @@ export default function LoginPage() {
         </CardContent>
         <CardFooter>
           {/* TODO: Implementar lógica de autenticação */}
-          <Button className="w-full">Entrar</Button>
+          <Button className="w-full" onClick={()=> onLogin()}>Entrar</Button>
         </CardFooter>
       </Card>
     </div>
