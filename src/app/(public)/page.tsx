@@ -12,7 +12,7 @@ export default function HomePage() {
           Bem-vindo ao SASI
         </h1>
         <p className="text-lg text-muted-foreground mb-8">
-          Sistema de Apoio à Supervisão Institucional.
+          Sistema de Análise em Saúde Integrada.
         </p>
         <Link href="/login">
           <Button size="lg">Acessar o Sistema</Button>

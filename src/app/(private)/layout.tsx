@@ -10,11 +10,11 @@ export default function PrivateLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-muted/40">
+    <div className="flex min-h-screen w-full bg-muted/40">
       <Sidebar />
-      <div className="flex flex-1 flex-col sm:gap-4 sm:py-4 sm:pl-14 md:pl-64">
+      <div className="flex flex-1 flex-col">
         <PrivateHeader />
-        <main className="flex-grow p-4 sm:px-6 sm:py-0 md:gap-8">{children}</main>
+        <main className="flex-grow p-4 sm:px-6 sm:py-6">{children}</main>
         <Footer />
       </div>
     </div>
