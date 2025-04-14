@@ -2,6 +2,8 @@
 
 Este projeto é uma Prova de Conceito (Proof of Concept - PoC) para o frontend do SASI, utilizando Next.js, TypeScript, Tailwind CSS e Shadcn/UI.
 
+Desenvolvido por: thallysvilemos@gmail.com
+
 O objetivo do SASI é ser um sistema de apoio à decisão para gestores de saúde pública, apresentando dashboards, tabelas e mapas com informações georreferenciadas e integrando dados de diversas fontes (DATASUS, InfoGripe, InfoDengue, IBGE, etc.) para fornecer insights valiosos.
 
 ## 🚀 Começando

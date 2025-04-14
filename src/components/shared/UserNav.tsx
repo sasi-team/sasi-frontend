@@ -1,3 +1,5 @@
+'use client'; // Necessário para useAuth e interação
+
 import {
   Avatar,
   AvatarFallback,
@@ -14,12 +16,22 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useAuth } from "@/contexts/AuthContext"
+import { useRouter } from "next/navigation"
 
 export function UserNav() {
+  const { logout } = useAuth()
+  const router = useRouter()
+
   // TODO: Obter dados do usuário (nome, email, imagem) do estado/contexto
   const userName = "Usuário SASI";
   const userEmail = "usuario@exemplo.com";
   const userInitials = userName.split(' ').map(n => n[0]).join('');
+
+  const handleLogout = () => {
+    logout()
+    router.push('/login')
+  }
 
   return (
     <DropdownMenu>
@@ -52,7 +64,7 @@ export function UserNav() {
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={handleLogout}>
           Sair
           {/* TODO: Implementar logout */}
           {/* <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut> */}
