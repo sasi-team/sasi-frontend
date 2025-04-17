@@ -2,6 +2,9 @@ import Link from "next/link";
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import Hero from "@/sections/Hero";
+import Sobre from "@/sections/Sobre";
+import Carrossel from "@/sections/Carrossel";
 
 export default function HomePage() {
   return (
@@ -11,6 +14,7 @@ export default function HomePage() {
       {/* Seção "Sobre" (resumo) */}
       <Sobre/>
       {/* Seção "Funcionalidades" (Exemplo) */}
+      <Carrossel/>
       <section>
         <h2 className="section-title text-center">Funcionalidades Principais</h2>
         <div className="grid md:grid-cols-3 gap-6">
