@@ -6,6 +6,8 @@ import { useAuth } from "@/contexts/AuthContext"; // Importa o hook
 import { Footer } from '@/components/shared/Footer';
 import { Sidebar } from '@/components/shared/Sidebar';
 import { PrivateHeader } from '@/components/shared/PrivateHeader';
+import { AppSidebar } from '@/components/shared/SidebarApp';
+import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
 
 export default function PrivateLayout({
   children,
@@ -31,12 +33,16 @@ export default function PrivateLayout({
   // Renderiza o layout normal se autenticado
   return (
     <div className="flex min-h-screen w-full bg-muted/40">
-      <Sidebar />
-      <div className="flex flex-1 flex-col">
-        <PrivateHeader />
-        <main className="flex-grow p-4 sm:px-6 sm:py-6">{children}</main>
-        <Footer />
-      </div>
+      <SidebarProvider defaultOpen>
+        <AppSidebar />
+        <SidebarInset>
+          <div className="flex flex-1 flex-col">
+            <PrivateHeader />
+            <main className="flex-grow p-4 sm:px-6 sm:py-6">{children}</main>
+            <Footer />
+          </div>
+        </SidebarInset>
+      </SidebarProvider>
     </div>
   );
 } 
