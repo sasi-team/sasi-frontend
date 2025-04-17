@@ -7,18 +7,7 @@ export default function HomePage() {
   return (
     <div className="space-y-12">
       {/* Seção Hero/Login */}
-      <section className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight lg:text-5xl mb-4">
-          Bem-vindo ao SASI
-        </h1>
-        <p className="text-lg text-muted-foreground mb-8">
-          Sistema de Análise em Saúde Integrada.
-        </p>
-        <Link href="/login">
-          <Button size="lg">Acessar o Sistema</Button>
-        </Link>
-      </section>
-
+      <Hero/>
       {/* Seção "Sobre" (resumo) */}
       <section>
         <h2 className="section-title text-center">Sobre o Sistema</h2>
