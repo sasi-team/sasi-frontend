@@ -119,6 +119,26 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  :root {
+    --sidebar-width: 16rem;
+    --sidebar-width-icon: 3rem;
+    
+    /* Cores da Sidebar */
+    --sidebar: 0 0% 100%;
+    --sidebar-foreground: 224 71.4% 4.1%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent-foreground: 222.2 47.4% 11.2%;
+  }
+
+  [data-theme="dark"] {
+    --sidebar: 224 71.4% 4.1%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-border: 215 27.9% 16.9%;
+    --sidebar-accent: 215 27.9% 16.9%;
+    --sidebar-accent-foreground: 210 20% 98%;
+  }
 }
 
 @layer components {
