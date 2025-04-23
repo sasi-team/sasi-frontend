@@ -18,7 +18,7 @@ export function Header() {
 
         <div className="flex items-center">
           <Image
-            src="/logo-sasi.png"
+            src="/images/logo-sasi.png"
             width={200}
             height={200}
             alt="Logo do Projeto"
