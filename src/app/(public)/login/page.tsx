@@ -71,7 +71,7 @@ export default function LoginPage() {
             alt="Logo"
             width={200}
             height={100}
-            className="mx-auto mb-4"
+            className="mx-auto"
           />
           <CardTitle className="text-center text-4xl mb-2 font-bold text-primary">S<span className="text-chart-3">A</span>S<span className="text-chart-3">I</span></CardTitle>
           <CardDescription className="text-center tlext-wrap text-lg text-primary font-semibold mb-4 px-4">
