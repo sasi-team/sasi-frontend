@@ -1,8 +1,6 @@
-"use client"
 import Link from 'next/link';
-import Image from 'next/image'; // Importar Image
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { usePathname } from 'next/navigation';
 
 const sectionLinks = [
   { name: 'Plataforma', id: 'plataforma' },
@@ -12,9 +10,6 @@ const sectionLinks = [
 ];
 
 export function Header() {
-
-  const pathname = usePathname();
-  const isHomePage = pathname === '/';
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-primary text-primary-foreground shadow-sm ">
