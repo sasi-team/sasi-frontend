@@ -11,7 +11,7 @@ export default function PublicLayout({
   return (
     <div className="relative flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1 container mx-auto p-4">{children}</main>
+      <main className="w-full mx-auto">{children}</main>
       <Footer />
     </div>
   );
