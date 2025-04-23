@@ -13,7 +13,7 @@ export function Footer() {
             alt="Logo SASI"
             width={60}
             height={60}
-            className="mb-4"
+            className="mb-4 rounded-full"
           />
           <div className="flex gap-4 mt-4 text-xl">
             <FaFacebookF />

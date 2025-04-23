@@ -16,7 +16,7 @@ export function Header() {
             width={200}
             height={200}
             alt="Logo do Projeto"
-            className="h-10 w-auto" />
+            className="h-10 w-auto rounded-full" />
         </div>
 
         {/* Navegação */}
