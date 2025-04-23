@@ -1,45 +1,54 @@
 import Link from 'next/link';
-
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { ModeToggle } from '@/components/ui/mode-toggle';
 
-// TODO: Adicionar componente NavigationMenu do Shadcn se necessário
-// TODO: Obter links de um array/configuração
+const sectionLinks = [
+  { name: 'Plataforma', id: 'plataforma' },
+  { name: 'Galeria', id: 'galeria' },
+  { name: "FAQ", id: "faq" },
+  { name: "Sobre Nós", id: "#sobre-nos" }
+];
 
 export function Header() {
+
   return (
-    <header className="sticky px-4 top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
-        {/* Logo/Título */}
-        <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            {/* TODO: Adicionar um ícone/logo SVG? */}
-            <span className="font-bold sm:inline-block">
-              SASI
-            </span>
-          </Link>
+    <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-primary text-primary-foreground shadow-sm ">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+
+        <div className="flex items-center">
+          <Image
+            src="/logo-sasi.png"
+            width={200}
+            height={200}
+            alt="Logo do Projeto"
+            className="h-10 w-auto rounded-full" />
         </div>
 
-        {/* Navegação Principal (Apenas Sobre) */}
-        <nav className="flex flex-1 items-center space-x-6 text-sm font-medium">
-          <Link
-            href="/sobre"
-            className="transition-colors hover:text-foreground/80 text-foreground/60"
-          >
-            Sobre
-          </Link>
-        </nav>
-
-        {/* Botão de Login */}
-        <div className="flex items-center justify-end space-x-4">
-          <nav>
-            <Link href="/login">
-              <Button variant="secondary" size="sm">
-                Login
-              </Button>
+        <nav className="flex items-center space-x-3 text-sm font-medium">
+          {sectionLinks.map((link) => (
+            <Link
+              key={link.id}
+              href={`/#${link.id}`}
+              className="transition-colors hover:text-primary-foreground/80 text-primary-foreground/90"
+            >
+              {link.name}
             </Link>
-          </nav>
-        </div>
+          ))}
+
+          <Link href={"/#contato"}>
+            <Button size={"sm"} className="bg-white text-primary hover:bg-white/90">
+              ENTRAR EM CONTATO
+            </Button>
+          </Link>
+          <Link href="/login">
+            <Button size={"sm"} className="bg-white text-primary hover:bg-white/90">
+              ENTRAR NO SISTEMA
+            </Button>
+          </Link>
+          <ModeToggle />
+        </nav>
       </div>
     </header>
   );
-} 
+}

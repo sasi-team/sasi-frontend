@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "SASI PoC",
@@ -24,9 +25,16 @@ export default function RootLayout({
           // GeistMono.variable // Removido temporariamente
         )}
       >
-        <AuthProvider>
-          {children}
-        </AuthProvider>
+        <ThemeProvider 
+          attribute="class" 
+          defaultTheme="light" 
+          enableSystem 
+          disableTransitionOnChange
+        >
+          <AuthProvider>
+            {children}
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
