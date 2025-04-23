@@ -7,43 +7,42 @@ import { Button } from '@/components/ui/button';
 
 export function Header() {
   return (
-    <header className="sticky px-4 top-0 z-50 w-full border-b border-primary/20 bg-primary text-primary-foreground">
-      <div className="container flex h-16 items-center">
-        {/* Logo/Título */}
-        <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image
-              src="/logo-sasi.png"
-              alt="SASI Logo"
-              width={60}
-              height={60}
-              className="h-auto rounded-full"
-            />
-          </Link>
+    <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-primary text-primary-foreground shadow-sm ">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+        {/* Logo do Projeto */}
+        <div className="flex items-center">
+          <Image
+            src="/logo-sasi.png"
+            width={200}
+            height={200}
+            alt="Logo do Projeto"
+            className="h-10 w-auto" />
         </div>
 
-        {/* Navegação Principal (Apenas Sobre) - Adicionar navegção entre seções da landing */}
-        <nav className="flex flex-1 items-center space-x-6 text-sm font-medium">
-          <Link
-            href="/sobre"
-            // Ajustar cores para contraste
-            className="transition-colors hover:text-primary-foreground/80 text-primary-foreground/90"
-          >
-            Sobre
+        {/* Navegação */}
+        <div className="flex items-center space-x-3 text-sm font-medium">
+          <Link href="#plataforma" className="hover:text-background">
+            Plataforma
           </Link>
-          {/* Adicionar outros links do Figma aqui (Plataforma, Galeria) se necessário */}
-          {/* Implementar links de rolagem com "#" */}
-        </nav>
-
-        {/* Botão de Login/Contato */}
-        <div className="flex items-center justify-end space-x-4">
-          <nav>
-            <Link href="/login">
-              <Button variant="secondary" size="sm" className="bg-white text-primary hover:bg-white/90">
-                Login
-              </Button>
-            </Link>
-          </nav>
+          <Link href="#galeria" className="hover:text-background">
+            Galeria
+          </Link>
+          <Link href="#faq" className="hover:text-background">
+            FAQ
+          </Link>
+          <Link href="#sobre-nos" className="hover:text-background">
+            Sobre Nós
+          </Link>
+          <Link href="#contato">
+            <Button size={"sm"} className="bg-white text-primary hover:bg-white/90">
+              ENTRAR EM CONTATO
+            </Button>
+          </Link>
+          <Link href="/login">
+            <Button size={"sm"} className="bg-white text-primary hover:bg-white/90">
+              ENTRAR NO SISTEMA
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
