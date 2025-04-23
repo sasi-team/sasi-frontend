@@ -1,19 +1,34 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+import Image from "next/image";
 
 export default function Hero() {
-    return (
-        <section className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight lg:text-5xl mb-4">
-          Bem-vindo ao SASI
+  return (
+    <section className="relative h-[450px] md:h-[550px] flex items-center pl-8 overflow-hidden bg-primary">
+      {/* Imagem de fundo com sobreposição escura */}
+      <Image
+        src="/images/hero-bg.png"
+        alt="Fundo SASI"
+        fill
+        className="object-cover opacity-20"
+        priority
+      />
+
+      {/* Conteúdo */}
+      <div className="z-10 text-white max-w-xl px-6">
+        <h1 className="text-2xl md:text-4xl font-bold uppercase leading-tight">
+          Transformando dados em saúde pública eficiente
         </h1>
-        <p className="text-lg text-muted-foreground mb-8">
-          Sistema de Análise em Saúde Integrada.
+        <p className="mt-4 text-xl leading-relaxed">
+          O <strong>SASI</strong> é a plataforma que unifica dados de saúde pública em um único painel inteligente,
+          ajudando gestores a tomar decisões rápidas, antecipar <strong>surtos</strong> e reduzir <strong>desigualdades</strong>.
         </p>
-        <Link href="/login">
-          <Button size="lg">Acessar o Sistema</Button>
+        <Link href="/#contato">
+          <Button className="mt-6 bg-white text-primary font-semibold hover:bg-muted transition-colors duration-300 ease-in-out cursor-pointer">
+            QUERO CONHECER A PLATAFORMA
+          </Button>
         </Link>
-      </section>
-    )
+      </div>
+    </section>
+  );
 }
