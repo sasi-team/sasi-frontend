@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { ModeToggle } from '@/components/ui/mode-toggle';
 
 const sectionLinks = [
   { name: 'Plataforma', id: 'plataforma' },
@@ -24,7 +25,7 @@ export function Header() {
             className="h-10 w-auto rounded-full" />
         </div>
 
-        <div className="flex items-center space-x-3 text-sm font-medium">
+        <nav className="flex items-center space-x-3 text-sm font-medium">
           {sectionLinks.map((link) => (
             <Link
               key={link.id}
@@ -45,7 +46,8 @@ export function Header() {
               ENTRAR NO SISTEMA
             </Button>
           </Link>
-        </div>
+          <ModeToggle />
+        </nav>
       </div>
     </header>
   );

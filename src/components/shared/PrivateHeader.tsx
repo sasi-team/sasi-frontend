@@ -1,4 +1,5 @@
 import { UserNav } from "./UserNav";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export function PrivateHeader() {
   return (
@@ -9,10 +10,11 @@ export function PrivateHeader() {
           {/* Placeholder Esquerdo */}
         </div>
         <div className="flex items-center space-x-4">
-          {/* TODO: Adicionar ícones de notificação, tema, etc? */}
+          <ModeToggle />
+          {/* TODO: Adicionar ícones de notificação, etc? */}
           <UserNav />
         </div>
       </div>
     </header>
   );
-} 
+}
