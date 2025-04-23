@@ -14,6 +14,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useAuth } from "@/contexts/AuthContext";
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -62,42 +64,63 @@ export default function LoginPage() {
 
   return (
     <div className="flex justify-center py-12">
-      <Card className="w-full max-w-sm">
-        <form onSubmit={handleSubmit}>
+      <Card className="w-full max-w-2xl flex-row bg-primary/15">
+        <div className="flex flex-1 flex-col align-center justify-center">
+          <Image
+            src="/sasi.png"
+            alt="Logo"
+            width={200}
+            height={100}
+            className="mx-auto mb-4"
+          />
+          <CardTitle className="text-center text-4xl mb-2 font-bold text-primary">S<span className="text-red-500">A</span>S<span className="text-red-500">I</span></CardTitle>
+          <CardDescription className="text-center tlext-wrap text-lg text-primary font-semibold mb-4 px-4">
+            Sistema de Análise em Saúde Integrada
+          </CardDescription>
+        </div>
+        <form onSubmit={handleSubmit} className="flex-1 flex-col align-center justify-center my-6">
           <CardHeader>
-            <CardTitle className="text-2xl">Login SASI</CardTitle>
-            <CardDescription>
-              Digite seu email e senha para acessar o sistema.
-            </CardDescription>
+            <CardTitle className="text-2xl text-center font-bold mb-4 text-primary">Acesse o S<span className='text-red-500'>A</span>S<span className="text-red-500">I</span ></CardTitle>
           </CardHeader>
-          <CardContent className="grid gap-4">
+          <CardContent className="grid gap-4" >
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="seu@email.com"
+                placeholder="Digite seu e-mail"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={isLoading}
+                className="bg-primary-foreground border-primary"
+                autoComplete="email"
               />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="password">Senha</Label>
+              <div className='flex items-center justify-between'>
+                <Label htmlFor="password">Senha</Label>
+                {/* <Link
+                  href="/recuperarsenha"
+                  className="text-sm font-medium text-primary hover:text-secondary text-shadow-accent">
+                  Esqueceu a senha?
+                </Link> */}
+              </div>
               <Input
                 id="password"
                 type="password"
+                placeholder="Digite sua senha"
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={isLoading}
+                className="bg-primary-foreground border-primary"
               />
             </div>
             {error && <p className="text-sm font-medium text-destructive">{error}</p>}
           </CardContent>
           <CardFooter>
-            <Button type="submit" className="w-full" disabled={isLoading}>
+            <Button type="submit" className="w-full mt-5" disabled={isLoading}>
               {isLoading ? 'Entrando...' : 'Entrar'}
             </Button>
           </CardFooter>
