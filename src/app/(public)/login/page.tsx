@@ -64,8 +64,8 @@ export default function LoginPage() {
 
   return (
     <div className="flex justify-center py-12">
-      <Card className="w-full max-w-2xl flex-row bg-primary/15">
-        <div className="flex flex-1 flex-col align-center justify-center">
+      <Card className="w-full max-w-2xl flex-row">
+        <div className="flex flex-1 flex-col align-center justify-center cursor-pointer" onClick={() => router.push('/')}>
           <Image
             src="/sasi.png"
             alt="Logo"
@@ -84,7 +84,7 @@ export default function LoginPage() {
           </CardHeader>
           <CardContent className="grid gap-4" >
             <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email" className="text-primary">Email</Label>
               <Input
                 id="email"
                 type="email"
@@ -99,12 +99,12 @@ export default function LoginPage() {
             </div>
             <div className="grid gap-2">
               <div className='flex items-center justify-between'>
-                <Label htmlFor="password">Senha</Label>
-                {/* <Link
+                <Label htmlFor="password" className="text-primary">Senha</Label>
+                <Link
                   href="/recuperarsenha"
                   className="text-sm font-medium text-primary hover:text-secondary text-shadow-accent">
                   Esqueceu a senha?
-                </Link> */}
+                </Link>
               </div>
               <Input
                 id="password"
