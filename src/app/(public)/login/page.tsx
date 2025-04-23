@@ -73,14 +73,14 @@ export default function LoginPage() {
             height={100}
             className="mx-auto mb-4"
           />
-          <CardTitle className="text-center text-4xl mb-2 font-bold text-primary">S<span className="text-red-500">A</span>S<span className="text-red-500">I</span></CardTitle>
+          <CardTitle className="text-center text-4xl mb-2 font-bold text-primary">S<span className="text-chart-3">A</span>S<span className="text-chart-3">I</span></CardTitle>
           <CardDescription className="text-center tlext-wrap text-lg text-primary font-semibold mb-4 px-4">
             Sistema de Análise em Saúde Integrada
           </CardDescription>
         </div>
         <form onSubmit={handleSubmit} className="flex-1 flex-col align-center justify-center my-6">
           <CardHeader>
-            <CardTitle className="text-2xl text-center font-bold mb-4 text-primary">Acesse o S<span className='text-red-500'>A</span>S<span className="text-red-500">I</span ></CardTitle>
+            <CardTitle className="text-2xl text-center font-bold mb-4 text-primary">Acesse o S<span className='text-chart-3'>A</span>S<span className="text-chart-3">I</span ></CardTitle>
           </CardHeader>
           <CardContent className="grid gap-4" >
             <div className="grid gap-2">
