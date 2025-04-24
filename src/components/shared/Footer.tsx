@@ -9,7 +9,7 @@ export function Footer() {
         {/* Coluna 1 - Logo/Redes */}
         <div className="flex flex-col items-center">
           <Image
-            src="/logo-sasi.png"
+            src="/images/logo-sasi.png"
             alt="Logo SASI"
             width={60}
             height={60}
@@ -59,8 +59,8 @@ export function Footer() {
           </ul>
           <h3 className="font-semibold mb-2">Baixe nosso aplicativo</h3>
           <div className="space-y-2">
-            <Image src="/google-play.png" alt="Google Play" width={150} height={50} className="rounded-md" />
-            <Image src="/app-store.png" alt="App Store" width={150} height={50} className="rounded-md" />
+            <Image src="/images/google-play.png" alt="Google Play" width={150} height={50} className="rounded-md" />
+            <Image src="/images/app-store.png" alt="App Store" width={150} height={50} className="rounded-md" />
           </div>
         </div>
       </div>

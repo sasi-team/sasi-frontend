@@ -16,7 +16,7 @@ export default function PublicLayout({
   return (
     <div className={`relative flex min-h-screen flex-col ${isAuthPage ? 'justify-center items-center bg-primary' : ''}`}>
       {!isAuthPage && <Header />}
-      <main className={`container mx-auto p-4 ${!isAuthPage ? 'flex-1' : ''}`}>{children}</main>
+      <main className="w-full mx-auto">{children}</main>
       {!isAuthPage && <Footer />}
     </div>
   );
