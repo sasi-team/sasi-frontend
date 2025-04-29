@@ -1,40 +1,42 @@
 import * as React from "react"
+import Image from "next/image"
 
-import { Card, CardContent } from "@/components/ui/card"
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel"
 
+// Lista de imagens para o carrossel
+const images = [
+  "/images/slide-1.png",
+  "/images/slide-2.png",
+  "/images/slide-3.png",
+]
+
 export default function Carrossel() {
-    return (
-        <section className="max-w-[80%] mx-auto">
-            <Carousel
-                opts={{
-                    align: "center",
-                    loop: true
-                }}
-                className="w-full"
-            >
-                <CarouselContent>
-                    {Array.from({ length: 5 }).map((_, index) => (
-                        <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                            <div className="p-1">
-                                <Card>
-                                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                                        <span className="text-3xl font-semibold">{index + 1}</span>
-                                    </CardContent>
-                                </Card>
-                            </div>
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-            </Carousel>
-        </section>
-    )
+  return (
+    <Carousel className="w-full" opts={{loop: true}}>
+      <CarouselContent>
+        {images.map((src, index) => (
+          <CarouselItem key={index}>
+            <div className="p-1">
+              <Image
+                src={src}
+                alt={`Imagem ${index + 1} da Galeria`}
+                width={0} 
+                height={0} 
+                sizes="100vw" 
+                className="w-full h-auto rounded-lg object-cover border-1 border-black shadow-lg"
+              />
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  )
 }
