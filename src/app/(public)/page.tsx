@@ -1,5 +1,10 @@
 import Hero from "@/sections/Hero";
 import FeatureSection from "@/sections/FeatureSection";
+import About from "@/sections/About";
+import Gallery from "@/sections/Gallery";
+import ContactForm from "@/sections/ContactForm";
+import FAQ from "@/sections/FAQ";
+import Team from "@/sections/Team";
 
 export default function HomePage() {
   return (
@@ -7,8 +12,23 @@ export default function HomePage() {
       {/* Seção Hero */}
       <Hero />
 
-      { /* Seção 1 */}
+      { /* Seção de Recursos */}
       <FeatureSection />
+
+      {/* Seção Sobre o Sistema */}
+      <About />
+
+      {/* Seção de Galeria */}
+      <Gallery />
+
+      {/* Seção de Contato */}
+      <ContactForm />
+
+      {/* Seção de Perguntas Frequentes */}
+      <FAQ />
+
+      {/* Seção de Sobre Nós */}
+      <Team />
     </div>
   );
 }

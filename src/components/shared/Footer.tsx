@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/f
 export function Footer() {
   return (
     <footer className="py-10 px-6 border-primary/20 bg-primary text-primary-foreground">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
         {/* Coluna 1 - Logo/Redes */}
         <div className="flex flex-col items-center">
           <Image
@@ -41,12 +41,13 @@ export function Footer() {
         <div>
           <h3 className="font-semibold mb-2">Menu</h3>
           <ul className="space-y-1">
-            <li>Plataforma</li>
-            <li>Galeria</li>
-            <li>FAQ</li>
-            <li>Sobre Nós</li>
-            <li>Contato</li>
+            <li><Link href={"/#plataforma"}>Plataforma</Link></li>
+            <li><Link href={"/#galeria"}>Galeria</Link></li>
+            <li><Link href={"/#faq"}>FAQ</Link></li>
+            <li><Link href={"/#sobre-nos"}>Sobre Nós</Link></li>
+            <li><Link href={"/#contato"}>Contato</Link></li>
           </ul>
+
         </div>
 
         {/* Coluna 4 - Links úteis */}
@@ -54,13 +55,12 @@ export function Footer() {
           <h3 className="font-semibold mb-2">Links úteis</h3>
           <ul className="space-y-1">
             <li>Políticas</li>
-            <li>FAQ</li>
             <li>Sobre</li>
           </ul>
-          <h3 className="font-semibold mb-2">Baixe nosso aplicativo</h3>
+          <h3 className="font-semibold mb-2 mt-2">Baixe nosso aplicativo</h3>
           <div className="space-y-2">
-            <Image src="/images/google-play.png" alt="Google Play" width={150} height={50} className="rounded-md" />
-            <Image src="/images/app-store.png" alt="App Store" width={150} height={50} className="rounded-md" />
+            <Image src="/images/google-play.png" alt="Google Play" width={150} height={50} className="rounded-md mx-auto md:mx-0" />
+            <Image src="/images/app-store.png" alt="App Store" width={150} height={50} className="rounded-md mx-auto md:mx-0" />
           </div>
         </div>
       </div>
@@ -69,6 +69,6 @@ export function Footer() {
       <div className="mt-10 border-t border-white/30 pt-4 text-sm text-center">
         © 2025 SASI – Desenvolvido por <span className="font-medium"><Link href={"https://cepedi.org.br"} target="_blank">CEPEDI</Link > | <Link href={"https://www.restic36.cepedi.org.br"} target="_blank">RESTIC36</Link> | <Link href={"https://softex.br"} target="_blank"> SOFTEX </Link> </span> | Todos os direitos reservados
       </div>
-    </footer>
+    </footer >
   );
 } 
