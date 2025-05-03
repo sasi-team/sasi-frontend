@@ -7,14 +7,14 @@ const sectionLinks = [
   { name: 'Plataforma', id: 'plataforma' },
   { name: 'Galeria', id: 'galeria' },
   { name: "FAQ", id: "faq" },
-  { name: "Sobre Nós", id: "#sobre-nos" }
+  { name: "Sobre Nós", id: "sobre-nos" }
 ];
 
 export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-primary text-primary-foreground shadow-sm ">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+      <div className="container mx-auto flex items-center justify-between px-12 py-3">
 
         <div className="flex items-center">
           <Image
@@ -26,23 +26,25 @@ export function Header() {
         </div>
 
         <nav className="flex items-center space-x-3 text-sm font-medium">
-          {sectionLinks.map((link) => (
-            <Link
-              key={link.id}
-              href={`/#${link.id}`}
-              className="transition-colors hover:text-primary-foreground/80 text-primary-foreground/90"
-            >
-              {link.name}
-            </Link>
-          ))}
+          <div className="hidden lg:flex space-x-3">
+            {sectionLinks.map((link) => (
+              <Link
+                key={link.id}
+                href={`/#${link.id}`}
+                className="transition-colors hover:text-primary-foreground/80 text-primary-foreground/90"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
 
           <Link href={"/#contato"}>
-            <Button size={"sm"} className="bg-white text-primary hover:bg-white/90">
+            <Button size={"sm"} className="bg-white text-primary hover:bg-white/90 cursor-pointer">
               ENTRAR EM CONTATO
             </Button>
           </Link>
           <Link href="/login">
-            <Button size={"sm"} className="bg-white text-primary hover:bg-white/90">
+            <Button size={"sm"} className="bg-white text-primary hover:bg-white/90 cursor-pointer">
               ENTRAR NO SISTEMA
             </Button>
           </Link>
