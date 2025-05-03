@@ -1,15 +1,14 @@
 import Image from "next/image";
 
 export default function About() {
-
   return (
-    <section className="pb-8 px-6" >
+    <section className="pb-8 px-6" id="plataforma">
       {/* Seção de Sobre o Sistema SASI */}
       <h2 className="text-center text-2xl md:text-3xl font-bold text-destructive mb-12">
         O Sistema SASI
       </h2>
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div className="text-center md:text-left max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h3 className="text-primary text-2xl md:text-3xl font-bold mb-4">
             Tecnologia que transforma dados em saúde pública eficiente
@@ -29,7 +28,7 @@ export default function About() {
             alt="Sistema SASI"
             width={600}
             height={400}
-            className="rounded-xl shadow-lg"
+            className="rounded-xl shadow-lg mx-auto"
           />
         </div>
       </div>

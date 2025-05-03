@@ -30,9 +30,9 @@ export default function FeatureSection() {
       </h2>
 
       {/* Seção de Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {features.map((feature, index) => (
-          <Card key={index} className="shadow-md bg-primary">
+          <Card key={index} className="shadow-md bg-primary transition-transform transform hover:scale-105 duration-300 ease-in-out">
             <CardHeader className="flex flex-col items-center">
               {feature.icon}
               <CardTitle className="mt-2 text-lg font-semibold text-white">{feature.title}</CardTitle>
